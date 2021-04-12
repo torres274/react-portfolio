@@ -1,4 +1,16 @@
 .ProjectsCards__container {
-  flex: 1;
   padding: 0.75rem;
+  width: 30%;
+  height: 12rem;
+}
+
+.ProjectsCards__container > figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.ProjectsCards__container > figure > img {
+  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
 }
