@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "description": "E-commerce",
+      "projectURL": "#",
+      "imageURL": "/images/mouse.png"
+    },
+    {
+      "id": 2,
+      "description": "Dashboard",
+      "projectURL": "#",
+      "imageURL": "/images/admin.png"
+    },
+    {
+      "id": 3,
+      "description": "Landing page",
+      "projectURL": "#",
+      "imageURL": "/images/ids.png"
+    }
+  ]
+}

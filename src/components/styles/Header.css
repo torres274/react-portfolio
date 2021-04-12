@@ -1,0 +1,48 @@
+:root {
+  --white: #fff;
+  --black: #0a0a0a;
+  --midBlack: #141c3a;
+}
+
+.Header__container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
+  padding: 0rem 1.5rem;
+}
+
+.Header__top {
+  padding: 7rem 1.5rem;
+}
+
+.Header__top > h1 {
+  color: var(--midBlack);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.125;
+  word-break: break-word;
+  font-size: 3rem;
+}
+
+.Header__top > h2 {
+  color: var(--midBlack);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  word-break: break-word;
+  font-size: 1.5rem;
+}
+
+.Header__top > img {
+  width: 210px;
+}
+
+.Header__bottom {
+  margin-bottom: -0.65rem;
+}
+
+.Header__bottom > img {
+  height: auto;
+}

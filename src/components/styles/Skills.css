@@ -1,0 +1,82 @@
+:root {
+  --white: #fff;
+  --bone: #e6ecf8;
+  --black: #141c3a;
+  --gray: #e6ecf8;
+  --blue: #1369db;
+}
+
+.Skills__container {
+  margin-top: -14rem;
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+  padding-left: 6.5rem;
+  padding-right: 6.5rem;
+}
+
+.Skills__box {
+  display: flex;
+  flex-direction: row;
+
+  text-align: center;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 5px 0 rgb(233 240 243 / 50%), 0 0 0 1px var(--bone);
+}
+
+.Skills__box .Skills__column:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+.Skills__column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  border-bottom: 0px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  padding: 60px 35px;
+}
+
+.Skills__column > img {
+  margin-bottom: 2em;
+  height: 48px;
+}
+
+.Skills__column > ul {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  word-break: break-word;
+  list-style: none;
+  margin-top: 0.25em;
+}
+
+.Skills__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.125;
+  word-break: break-word;
+
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.Skills__subtitle {
+  font-weight: 400;
+  font-size: 1.12;
+  word-break: break-word;
+
+  color: var(--blue);
+  margin-bottom: 1em;
+}
+
+.Skills__text {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  word-break: break-word;
+  margin-bottom: 2em;
+}

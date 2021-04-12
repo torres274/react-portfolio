@@ -1,0 +1,50 @@
+:root {
+  --blue: #1369db;
+  --lightBlue: #48abf7;
+  --white: #fff;
+  --black: #141c3a;
+}
+
+.Projects__container {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.Projects__container > h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.125;
+  word-break: break-word;
+}
+
+.Projects__container > h2 {
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.Projects__container > h2 > a {
+  font-weight: 400;
+  color: var(--blue);
+  transition: 0.3s;
+}
+
+.Projects__container > h2 > a:hover,
+.Projects__container > h2 > a:focus {
+  color: var(--lightBlue);
+}
+
+.Projects__box {
+  display: flex;
+  padding-top: 4rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.Projects__cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
