@@ -10,7 +10,7 @@ class Header extends React.Component {
             <React.Fragment>
                 <div className="Header__container">
                     <div className="Header__top">
-                        <h1>Software Developer</h1>
+                        <h1>Software Developer 1</h1>
                         <h2>I design and code interesting things, and I like it.</h2>
                         <img src={avatar} alt="Avatar" />
                     </div>
