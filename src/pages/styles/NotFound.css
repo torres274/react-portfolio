@@ -1,0 +1,44 @@
+.Notfound__container {
+  padding: 7rem 1.5rem;
+  text-align: center;
+}
+
+.Notfound__container > img {
+  margin-bottom: 48px;
+  max-width: 300px;
+}
+
+.Notfound__container > h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.125;
+  word-break: break-word;
+}
+
+.Notfound__container > h2 {
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.Notfound__bottom {
+  transition: 0.3s;
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 40px;
+  color: var(--blue);
+  padding: 7px 15px 7px 15px;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.Notfound__bottom:hover,
+.Notfound__bottom:focus {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}

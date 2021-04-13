@@ -11,7 +11,7 @@ class Projects extends React.Component {
             data: data
         }
     }
-    
+
     render() {
         return (
             <React.Fragment>

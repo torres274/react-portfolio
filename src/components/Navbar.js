@@ -9,7 +9,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="Navbar__">
+                <nav className="Navbar">
                     <div className="Navbar__container">
                         <div className="Navbar__logo">
                             <Link to="/">
@@ -20,7 +20,7 @@ class Navbar extends React.Component {
                         <div className="Navbar__menu">
                             <Link className="Navbar__resume" to={resume} rel="noreferrer" target="_blank">Download Resume</Link>
                             <div className="Navbar__item">
-                                <Link className="Navbar__button" to="/contact">Contact Me!</Link>
+                                <Link className="button" to="/contact">Contact Me!</Link>
                             </div>
                         </div>
                     </div>

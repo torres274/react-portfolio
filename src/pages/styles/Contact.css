@@ -1,0 +1,55 @@
+.Contact__container {
+  padding: 1.2rem 0;
+}
+
+.Contact__navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  border-bottom: 1px solid #e6ecf8;
+}
+
+.Contact__logo {
+  height: auto;
+  max-width: 100%;
+}
+
+.Contact__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Contact__undo {
+  cursor: pointer;
+  font-size: 25px;
+  color: var(--blue);
+}
+
+.Contact__undo:hover,
+.Contact__undo:focus {
+  color: var(--lightBlue);
+}
+
+.Contact__return {
+  font-size: 30px;
+  color: var(--blue);
+  margin-left: 25px;
+}
+
+.Contact__return:hover,
+.Contact__return:focus {
+  color: var(--lightBlue);
+}
+
+.Container__hero {
+  text-align: center;
+}
+
+.Container__hero > img {
+  width: 84px;
+  margin: -50px auto 50px;
+  z-index: 10;
+}

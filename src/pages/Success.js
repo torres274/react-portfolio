@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import './styles/Success.css'
 import logo from '../images/success.svg'
 
 class Success extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div>
-					<img src={logo} alt="" />
+				<div className="Success__container">
+					<img src={logo} alt="Success" />
 					<h1>Message received. Thanks!</h1>
 					<h2>I'll be in touch with you shortly.</h2>
-					<Link to="/">Back to home</Link>
+					<Link className="button" to="/">Back to home</Link>
 				</div>
 			</React.Fragment>
 		)

@@ -1,10 +1,4 @@
-:root {
-  --blue: #1369db;
-  --white: #fff;
-  --black: #141c3a;
-}
-
-.Navbar__ {
+.Navbar {
   padding: 1.2rem 0;
 }
 
@@ -18,7 +12,6 @@
 
 .Navbar__logo {
   height: auto;
-  max-width: 100%;
 }
 
 .Navbar__menu {
@@ -27,9 +20,9 @@
 }
 
 .Navbar__resume {
+  color: var(--blackCustom);
   font-size: 18px;
   font-weight: 300;
-  color: var(--black);
 }
 
 .Navbar__resume:hover {
@@ -38,23 +31,4 @@
 
 .Navbar__item {
   padding-left: 25px;
-}
-
-.Navbar__button {
-  transition: 0.3s;
-  background-color: transparent;
-  border: 2px solid var(--blue);
-  border-radius: 40px;
-  color: var(--blue);
-  padding: 7px 15px 7px 15px;
-  font-size: 18px;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.Navbar__button:hover,
-.Navbar__button:focus {
-  background-color: var(--blue);
-  border-color: var(--blue);
-  color: var(--white);
 }

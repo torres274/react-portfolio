@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+import './styles/NotFound.css'
 import logo from '../images/undraw_not_found.svg'
 
 function NotFound() {
 	return (
 		<React.Fragment>
-			<div>
-				<img src={logo} alt="" height="100" />
-				<Link to="/">Back to home</Link>
+			<div className="Notfound__container">
+				<img src={logo} alt="404" />
+				<h1>Page Not Found!</h1>
+				<h2>The page you were looking for could not be found.</h2>
+				<Link className="Notfound__bottom" to="/">Back to home</Link>
 			</div>
 		</React.Fragment>
 	)
