@@ -14,6 +14,7 @@
   background-color: $white;
   border-radius: 12px;
   box-shadow: 0px 5px 5px 0px rgba(188, 195, 209, 0.26);
+  flex-wrap: wrap;
 
   .Skills__column {
     display: flex;
@@ -22,6 +23,8 @@
     border-bottom: 0px solid $gray;
     border-right: 1px solid $gray;
     padding: 60px 35px;
+    min-width: 200px;
+    margin-top: 10px;
 
     img {
       margin-bottom: 2em;

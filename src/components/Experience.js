@@ -4,7 +4,7 @@ class Experience extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div>
+                <div className="Experience__container">
                     <h1>Experience section</h1>
                 </div>
             </React.Fragment>

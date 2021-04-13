@@ -6,6 +6,7 @@ import Title from "../components/Title"
 import Skills from "../components/Skills"
 import Projects from "../components/Projects"
 import Experience from "../components/Experience"
+import Start from "../components/Start"
 import Footer from "../components/Footer"
 
 class Main extends React.Component {
@@ -25,6 +26,7 @@ class Main extends React.Component {
 					subtitle="This is a summary of the experiences I had in past projects and internships."
 				/>
 				<Experience />
+				<Start />
 				<Footer />
 			</React.Fragment>
 		)

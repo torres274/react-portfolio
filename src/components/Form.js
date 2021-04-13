@@ -14,14 +14,6 @@ class Form extends React.Component {
         })
     }
 
-    // handleClick = e => {
-    //     console.log("Boton activo")
-    // }
-    // handleSubmit = e => {
-    //     e.preventDefault()
-    //     console.log(this.state)
-    // }
-
     render() {
         return (
             <React.Fragment>

@@ -4,19 +4,19 @@
       "id": 1,
       "description": "E-commerce",
       "projectURL": "#",
-      "imageURL": "/images/mouse.png"
+      "imageURL": "/images/projects/mouse.png"
     },
     {
       "id": 2,
       "description": "Dashboard",
       "projectURL": "#",
-      "imageURL": "/images/admin.png"
+      "imageURL": "/images/projects/admin.png"
     },
     {
       "id": 3,
       "description": "Landing page",
       "projectURL": "#",
-      "imageURL": "/images/ids.png"
+      "imageURL": "/images/projects/ids.png"
     }
   ]
 }

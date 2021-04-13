@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 class ProjectsCards extends React.Component {
     render() {
@@ -12,10 +11,6 @@ class ProjectsCards extends React.Component {
                                 <img src={project.imageURL} alt="Hola" width="300" />
                                 <figcaption>
                                     <h1>{project.description}</h1>
-                                    <Link to={project.projectURL}>
-                                        <span>visit website</span>
-                                        <span><i className="fas fa-angle-right"></i>-</span>
-                                    </Link>
                                 </figcaption>
                             </figure>
                         </div>
