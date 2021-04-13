@@ -1,8 +1,8 @@
 import React from 'react'
 
+import './styles/Projects.scss'
 import ProjectsCards from './ProjectsCards'
 import data from '../db/data.json'
-import './styles/Projects.css'
 
 class Projects extends React.Component {
     constructor(props) {

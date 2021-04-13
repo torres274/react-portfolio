@@ -1,29 +1,31 @@
+@import "../../index";
+
 .Header__container {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 0rem 1.5rem;
-  background-color: var(--white);
-  color: var(--black);
+  background-color: $white;
+  color: $black;
 }
 
 .Header__top {
   padding: 7rem 1.5rem;
-}
 
-.Header__top > h1 {
-  font-weight: 700;
-  font-size: 3rem;
-}
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
 
-.Header__top > img {
-  width: 210px;
+  img {
+    width: 210px;
+  }
 }
 
 .Header__bottom {
   margin-bottom: -0.65rem;
-}
 
-.Header__bottom > img {
-  height: auto;
+  img {
+    height: auto;
+  }
 }

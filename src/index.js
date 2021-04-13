@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Styles
-import './index.css';
-
-// Components
+import './index.scss';
 import App from './components/App';
 
 const container = document.getElementById('root');

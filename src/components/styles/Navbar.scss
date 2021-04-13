@@ -1,3 +1,5 @@
+@import "../../index";
+
 .Navbar {
   padding: 1.2rem 0;
 }
@@ -20,13 +22,13 @@
 }
 
 .Navbar__resume {
-  color: var(--blackCustom);
+  color: $midBlack;
   font-size: 18px;
   font-weight: 300;
-}
 
-.Navbar__resume:hover {
-  color: var(--blue);
+  &:hover {
+    color: $blue;
+  }
 }
 
 .Navbar__item {

@@ -1,9 +1,10 @@
+@import "../../index";
+
 .Title__container {
   display: flex;
   justify-content: center;
-
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: $blue;
+  color: $white;
   padding-bottom: 14rem;
   padding-top: 5rem;
   padding-left: 1.5rem;
@@ -12,12 +13,12 @@
 
 .Title__text {
   width: 70%;
-}
 
-.Title__text > h1 {
-  color: var(--white);
-}
+  h1 {
+    color: $white;
+  }
 
-.Title__text > h2 {
-  color: var(--white);
+  h2 {
+    color: $white;
+  }
 }

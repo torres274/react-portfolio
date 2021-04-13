@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './styles/Header.css'
+import './styles/Header.scss'
 import avatar from '../images/undraw_profile.svg'
 import hero from '../images/undraw_programming.svg'
 

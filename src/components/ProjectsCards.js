@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './styles/ProjectsCards.css'
+import './styles/ProjectsCards.scss'
 
 class ProjectsCards extends React.Component {
     render() {

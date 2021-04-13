@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUndo, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-import './styles/Contact.css'
+import './styles/Contact.scss'
 import Form from '../components/Form'
 import logo from '../images/logos/logo-blue.png'
 import profile from '../images/undraw_profile.svg'

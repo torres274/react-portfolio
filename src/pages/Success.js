@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './styles/Success.css'
+import './styles/Success.scss'
 import logo from '../images/success.svg'
 
 class Success extends React.Component {

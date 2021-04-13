@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './styles/Navbar.css'
+import './styles/Navbar.scss'
 import logo from '../images/logos/logo-blue.png'
 import resume from '../download/Daniel_Torres_CV.pdf'
 

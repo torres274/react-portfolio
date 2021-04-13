@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './styles/Form.css'
+import './styles/Form.scss'
 
 class Form extends React.Component {
     state = {
