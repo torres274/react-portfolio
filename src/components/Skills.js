@@ -1,6 +1,5 @@
 import React from 'react'
 
-import './styles/Skills.scss'
 import code from '../images/dev.svg'
 import tools from '../images/tools.svg'
 

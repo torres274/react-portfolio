@@ -1,6 +1,5 @@
 import React from 'react'
 
-import './styles/Projects.scss'
 import ProjectsCards from './ProjectsCards'
 import data from '../db/data.json'
 

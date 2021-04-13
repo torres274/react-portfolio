@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './styles/Form.scss'
-
 class Form extends React.Component {
     state = {
         name: "",
@@ -33,22 +31,20 @@ class Form extends React.Component {
                     <form onSubmit={this.handleSubmit}>
 
                         <div className="Form__top">
-                            <div>
+                            <div className="Form__input">
                                 <label>Name</label>
                                 <input
                                     onChange={this.handleChange}
-                                    className=""
                                     type="text"
                                     name="name"
                                     value={this.state.name}
                                 />
                             </div>
 
-                            <div>
+                            <div className="Form__input">
                                 <label>Email</label>
                                 <input
                                     onChange={this.handleChange}
-                                    className=""
                                     type="email"
                                     name="email"
                                     value={this.state.email}
@@ -57,11 +53,10 @@ class Form extends React.Component {
                         </div>
 
                         <div className="Form__bottom">
-                            <div>
+                            <div className="Form__input">
                                 <label>Message</label>
                                 <textarea
                                     onChange={this.handleChange}
-                                    className=""
                                     name="message"
                                     rows="5"
                                     value={this.state.message}

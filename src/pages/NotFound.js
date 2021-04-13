@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import './styles/NotFound.scss'
 import logo from '../images/undraw_not_found.svg'
 
 function NotFound() {

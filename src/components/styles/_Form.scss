@@ -1,0 +1,41 @@
+.Form__container {
+  form {
+    margin: 0px 20rem 20px 20rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Form__top {
+  display: flex;
+  flex-direction: row;
+}
+
+.Form__input {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+
+  label {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: rgba(41, 51, 71, 0.65);
+  }
+
+  input {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $midBlack;
+    box-shadow: none;
+    border: 1px solid $gray;
+    border-radius: 4px;
+  }
+}
+
+.Form__bottom {
+  margin-bottom: 1.5rem;
+}
+
+.Form_button {
+  padding: 7px 50px 7px 50px;
+}
