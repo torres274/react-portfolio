@@ -33,7 +33,7 @@ class Contact extends React.Component {
 					</div>
 				</nav>
 
-				<div className="Container__hero">
+				<div className="Contact__hero">
 					<img src={profile} alt="Profile" />
 				</div>
 
