@@ -10,7 +10,7 @@ class Skills extends React.Component {
                 <div className="Skills__container">
                     <div className="Skills__box">
                         <div className="Skills__column">
-                            <img src={code} alt="Code" />
+                            <img src={code} alt="Code" height="48" />
                             <h1 className="Skills__title">Front-end Developer</h1>
                             <p>I have experience collaborating with design.</p>
                             <p className="text__blue">Experience with:</p>
@@ -23,7 +23,7 @@ class Skills extends React.Component {
                         </div>
 
                         <div className="Skills__column">
-                            <img src={tools} alt="Tools" />
+                            <img src={tools} alt="Tools" height="48" />
                             <h1 className="Skills__title">Tools</h1>
                             <p>I have used some indispensable tools to work.</p>
                             <p className="text__blue">Tools:</p>
@@ -37,7 +37,7 @@ class Skills extends React.Component {
                         </div>
 
                         <div className="Skills__column">
-                            <img src={code} alt="Code" />
+                            <img src={code} alt="Code" height="48" />
                             <h1 className="Skills__title">Back-end Developer</h1>
                             <p>Experience developing applications in some languages.</p>
                             <p className="text__blue">Languages I speak:</p>

@@ -7,12 +7,7 @@ class ProjectsCards extends React.Component {
                 {this.props.projects.map((project) => {
                     return (
                         <div className="ProjectsCards__container" key={project.id}>
-                            <figure>
-                                <img src={project.imageURL} alt="Project" />
-                                <figcaption>
-                                    <h1>{project.description}</h1>
-                                </figcaption>
-                            </figure>
+                            <img src={project.imageURL} alt="Project" />
                         </div>
                     )
                 })}

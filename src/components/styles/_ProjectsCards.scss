@@ -1,17 +1,9 @@
 .ProjectsCards__container {
-  padding: 0.75rem;
-  width: 30%;
-  height: 12rem;
+  padding: 5px;
+  flex: 1;
 
-  figure {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-
-    img {
-      width: 300px;
-      transition: 0.25s ease-in-out;
-      -webkit-transition: 0.25s ease-in-out;
-    }
+  img {
+    width: 300px;
+    border-radius: 5px;
   }
 }

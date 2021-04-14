@@ -1,11 +1,13 @@
 .Experience__container {
-  margin-top: -18rem;
+  display: flex;
+  justify-content: center;
+  margin-top: -12rem;
   margin-bottom: 12rem;
-  padding: 5rem 6.5rem 1rem 6.5rem;
 }
 
 .Experience__box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 90%;
 }

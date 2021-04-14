@@ -1,26 +1,26 @@
 .Skills__container {
-  margin-top: -14rem;
-  padding-bottom: 1rem;
-  padding-top: 5rem;
-  padding-left: 6.5rem;
-  padding-right: 6.5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: -10rem;
+  margin-bottom: 5rem;
 }
 
 .Skills__box {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
   text-align: center;
   color: $midBlack;
   background-color: $white;
   border-radius: 12px;
   box-shadow: 0px 5px 5px 0px rgba(188, 195, 209, 0.26);
-  flex-wrap: wrap;
 
   .Skills__column {
     display: flex;
     flex-direction: column;
     flex: 1;
-    border-bottom: 0px solid $gray;
+    border-bottom: 1px solid $gray;
     border-right: 1px solid $gray;
     padding: 60px 35px;
     min-width: 200px;
@@ -28,7 +28,6 @@
 
     img {
       margin-bottom: 2em;
-      height: 48px;
     }
 
     &:last-child {
@@ -40,4 +39,10 @@
 
 .Skills__title {
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .Skills__column {
+    border-right: none !important;
+  }
 }

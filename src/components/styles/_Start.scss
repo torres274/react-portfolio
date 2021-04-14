@@ -7,7 +7,7 @@
 .Start__box {
   display: flex;
   justify-content: center;
-  padding: 2.5rem 1.25rem;
+  padding: 20px;
   margin: -9rem 2% 0px 2%;
   background-color: $midBlack;
   box-shadow: 0px 5px 5px 0px rgba(41, 64, 109, 0.26);
@@ -45,4 +45,16 @@
   align-items: center;
   justify-content: center;
   width: 280px;
+}
+
+@media only screen and (max-width: 650px) {
+  .Start__box {
+    margin: -12rem 2% 0px 2%;
+
+    .Start__columns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
