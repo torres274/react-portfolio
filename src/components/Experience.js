@@ -5,7 +5,17 @@ class Experience extends React.Component {
         return (
             <React.Fragment>
                 <div className="Experience__container">
-                    <h1>Experience section</h1>
+                    <div className="Experience__box">
+                        <div className="Experience__column">
+                            <img alt="Company" />
+                            <p>I have experience collaborating with design.</p>
+                        </div>
+
+                        <div className="Experience__column">
+                            <img alt="Code" />
+                            <p>I have experience collaborating with design.</p>
+                        </div>
+                    </div>
                 </div>
             </React.Fragment>
         )

@@ -8,7 +8,7 @@ class ProjectsCards extends React.Component {
                     return (
                         <div className="ProjectsCards__container" key={project.id}>
                             <figure>
-                                <img src={project.imageURL} alt="Hola" width="300" />
+                                <img src={project.imageURL} alt="Project" width="300" />
                                 <figcaption>
                                     <h1>{project.description}</h1>
                                 </figcaption>
