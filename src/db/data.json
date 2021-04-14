@@ -18,5 +18,22 @@
       "projectURL": "#",
       "imageURL": "/images/projects/ids.png"
     }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "imageURL": "/images/companies/mag.jpg",
+      "description": "I worked with a team developing an activity management system and a reporting system in C# and we used ASP.NET Web Forms, Visual Studio Team Foundation Server and Microsoft SQL Server."
+    },
+    {
+      "id": 2,
+      "imageURL": "/images/companies/mouse.png",
+      "description": "I created a website developed in PHP with Laravel framework and I used the technologies JavaScript, AJAX, MySQL and GitHub. The website was develop for the sale of electronic products like cell phones, computers and computer network equipment. This website has an administrative section for the control of products, inventories, orders and user roles."
+    },
+    {
+      "id": 3,
+      "imageURL": "/images/companies/ids.jpg",
+      "description": "I created a informative website developed in PHP. The website was develop to provide clients with information about consultancies for environmental management and industrial products."
+    }
   ]
 }

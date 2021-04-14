@@ -1,20 +1,22 @@
 import React from 'react'
 
+import ExperienceCards from './ExperienceCards'
+import data from '../db/data.json'
+
 class Experience extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: data
+        }
+    }
+
     render() {
         return (
             <React.Fragment>
                 <div className="Experience__container">
                     <div className="Experience__box">
-                        <div className="Experience__column">
-                            <img alt="Company" />
-                            <p>I have experience collaborating with design.</p>
-                        </div>
-
-                        <div className="Experience__column">
-                            <img alt="Code" />
-                            <p>I have experience collaborating with design.</p>
-                        </div>
+                        <ExperienceCards experience={this.state.data.experience} />
                     </div>
                 </div>
             </React.Fragment>
