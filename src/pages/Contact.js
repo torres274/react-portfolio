@@ -8,12 +8,12 @@ import logo from '../images/logos/logo-blue.png'
 import profile from '../images/undraw_profile.svg'
 
 class Contact extends React.Component {
-	resetForm = () => {
-		const form = document.getElementById('form')
-		form.reset()
-	}
-
 	render() {
+		const clear = () => {
+			document.querySelector('#contact-form').reset()
+			document.getElementById('messageCounter').textContent = '200'
+		}
+
 		return (
 			<React.Fragment>
 				<nav className="Contact__container">
@@ -26,7 +26,7 @@ class Contact extends React.Component {
 
 						<div className="Contact__menu">
 							<div className="Contact__undo">
-								<FontAwesomeIcon icon={faUndo} />
+								<FontAwesomeIcon icon={faUndo} onClick={clear} />
 							</div>
 							<Link className="Contact__return" to="/"><FontAwesomeIcon icon={faTimes} /></Link>
 						</div>

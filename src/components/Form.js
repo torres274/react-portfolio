@@ -71,7 +71,7 @@ export default function Form() {
                             aria-invalid={errors.message ? "true" : "false"}
                             {...register("message", { required: true, maxLength: 200 })}
                         ></textarea>
-                        <p className='message-chars'><i>{messageChars}</i></p>
+                        <p className='message-chars'><i id="messageCounter">{messageChars}</i></p>
                         {errors.message && errors.message.type === "required" && (
                             <div className="alert alert-message" role="alert">Message is required<br /></div>
                         )}
