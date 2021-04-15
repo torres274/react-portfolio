@@ -22,7 +22,9 @@ export default function Form() {
         sendForm('default_service', 'template_contact', '#contact-form')
             .then(function (response) {
                 form.reset();
-                history.push('/success')
+                if (response.status === 200) {
+                    history.push('/success')
+                }
             }, function (error) {
                 console.log('Failed to send message!', error);
             });
