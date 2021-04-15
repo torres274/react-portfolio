@@ -1,52 +1,88 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { init, sendForm } from 'emailjs-com';
+import { useHistory } from 'react-router';
 
-class Form extends React.Component {
-    state = {
-        name: "",
-        email: "",
-        message: ""
+init("user_XHHNmf63k96zsusaD0wt3")
+
+export default function Form() {
+    const history = useHistory()
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+    // Setting a random ID number to the user
+    const [contactNumber, setContactNumber] = useState("000000");
+    const generateContactNumber = () => {
+        const numStr = "000000" + (Math.random() * 1000000 | 0);
+        setContactNumber(numStr.substring(numStr.length - 6));
     }
 
-    handleChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
+    const onSubmit = (data) => {
+        const form = document.querySelector('#contact-form');
+        generateContactNumber();
+        sendForm('default_service', 'template_contact', '#contact-form')
+            .then(function (response) {
+                form.reset();
+                history.push('/success')
+            }, function (error) {
+                console.log('Failed to send message!', error);
+            });
     }
 
-    render() {
-        return (
-            <React.Fragment>
-                <div className="Form__container">
-                    <h1>How can I help you?</h1>
+    const message = watch('message') || "";
+    const messageChars = 100 - message.length;
 
-                    <form onSubmit={this.handleSubmit}>
+    return (
+        <React.Fragment>
+            <div className="Form__container">
+                <h1>How can I help you?</h1>
 
-                        <div className="Form__two_columns">
-                            <div className="Form__input">
-                                <label>Name</label>
-                                <input onChange={this.handleChange} type="text" name="name" value={this.state.name} />
-                            </div>
+                <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
 
-                            <div className="Form__input">
-                                <label>Email</label>
-                                <input onChange={this.handleChange} type="email" name="email" value={this.state.email} />
-                            </div>
-                        </div>
+                    <input type='hidden' name='id' value={contactNumber} />
 
-                        <div className="Form__one_column">
-                            <label>Message</label>
-                            <textarea onChange={this.handleChange} name="message" rows="5" value={this.state.message}></textarea>
-                        </div>
+                    <div className="Form__input">
+                        <label>Name</label>
+                        <input
+                            type="text"
+                            aria-invalid={errors.name ? "true" : "false"}
+                            {...register("name", { required: true, maxLength: 100 })}
+                        />
+                        {errors.name && errors.name.type === "required" && (
+                            <div className="alert" role="alert">Name is required<br /></div>
+                        )}
+                    </div>
 
-                        <div className="Form__button_container">
-                            <Link className="button" to="/success">Submit</Link>
-                        </div>
-                    </form>
-                </div>
-            </React.Fragment>
-        )
-    }
+                    <div className="Form__input">
+                        <label>Email</label>
+                        <input
+                            type="email"
+                            aria-invalid={errors.email ? "true" : "false"}
+                            {...register("email", { required: true })}
+                        />
+                        {errors.email && errors.email.type === "required" && (
+                            <div className="alert" role="alert">Email is required<br /></div>
+                        )}
+                    </div>
+
+                    <div className="Form__input">
+                        <label>Message</label>
+                        <textarea
+                            rows="5"
+                            aria-invalid={errors.message ? "true" : "false"}
+                            {...register("message", { required: true, maxLength: 200 })}
+                        ></textarea>
+                        <p className='message-chars'><i>{messageChars}</i></p>
+                        {errors.message && errors.message.type === "required" && (
+                            <div className="alert alert-message" role="alert">Message is required<br /></div>
+                        )}
+                    </div>
+
+                    <div className="Form__button_container">
+                        <input type="submit" className="button" value="Submit" />
+                    </div>
+
+                </form>
+            </div>
+        </React.Fragment>
+    )
 }
-
-export default Form
