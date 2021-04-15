@@ -8,15 +8,35 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
+  flex-wrap: wrap;
 }
 
 .Navbar__logo {
+  margin-top: 1rem;
   height: auto;
 }
 
 .Navbar__menu {
   display: flex;
   flex-direction: row;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .Navbar__menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Navbar__item {
+    padding-left: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 366px) {
+  .Navbar__item {
+    margin-top: 25px;
+  }
 }
 
 .Navbar__resume {
