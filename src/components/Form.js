@@ -22,16 +22,14 @@ export default function Form() {
         sendForm('default_service', 'template_contact', '#contact-form')
             .then(function (response) {
                 form.reset();
-                if (response.status === 200) {
-                    history.push('/success')
-                }
+                history.push('/success')
             }, function (error) {
                 console.log('Failed to send message!', error);
             });
     }
 
     const message = watch('message') || "";
-    const messageChars = 100 - message.length;
+    const messageChars = 200 - message.length;
 
     return (
         <React.Fragment>
