@@ -15,7 +15,7 @@ class Skills extends React.Component {
                             <p>I have experience collaborating with design.</p>
                             <p className="text__blue">Experience with:</p>
                             <p>HTML5, CSS3, JavaScript, SASS</p>
-                            <p className="text__blue">Frameworks and libraries:</p>
+                            <p className="text__blue">Libraries:</p>
                             <ul>
                                 <li>React</li>
                                 <li>Bootstrap</li>
