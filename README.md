@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
     <a href="https://github.com/torres274/react-portfolio">
-        <img src="src/public/images/programming.svg" alt="Logo" width="400" height="220">
+        <img src="src/images/undraw_programming.svg" alt="Logo" width="400" height="220">
     </a>
     <h3 align="center">Portfolio</h3>
 </p>
