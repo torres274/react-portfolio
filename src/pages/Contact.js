@@ -8,7 +8,7 @@ import logo from '../images/logos/logo-blue.png'
 import profile from '../images/undraw_profile.svg'
 
 class Contact extends React.Component {
-	render() {
+	render() { 
 		const clear = () => {
 			document.querySelector('#contact-form').reset()
 			document.getElementById('messageCounter').textContent = '200'
