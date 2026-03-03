@@ -6,5 +6,6 @@ import App from './components/App'
 
 const container = document.getElementById('root')
 
-ReactDOM.render(<App />, container)
+// Avoid JSX here so Vite's HTML build step can always parse this file
+ReactDOM.render(React.createElement(App), container)
 
