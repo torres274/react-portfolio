@@ -1,30 +1,185 @@
-.Header__container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 0rem 1.5rem;
-  background-color: $white;
-  color: $black;
+@use "../../pages/styles/variables" as *;
+
+.Header {
+  position: relative;
 }
 
-.Header__top {
-  padding: 7rem 1.5rem;
+.Header__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  color: $text-on-dark;
+  background: $bg-dark;
 
   h1 {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.75rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    color: $white;
   }
 
-  img {
-    width: 20%;
+  h2 {
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+    color: $text-on-dark-muted;
+    font-size: 1.1rem;
+  }
+
+  .Header__avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 6px;
+    background: $white;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .Header__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: 1.5rem;
+  }
+
+  .Header__button {
+    padding: 0.6rem 1.3rem;
+    border-radius: 999px;
+    background: $blue;
+    color: $white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.18s ease-out;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+
+    &:hover,
+    &:focus {
+      filter: brightness(1.1);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    }
+  }
+
+  .Header__ghostButton {
+    padding: 0.6rem 1.3rem;
+    border-radius: 999px;
+    border: 1px solid $white;
+    color: $white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.18s ease-out;
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 
-.Header__bottom {
-  margin-bottom: -0.65rem;
+.Header__intro {
+  background: $blue;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
 
-  img {
-    height: auto;
-    max-width: 100%;
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $white;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  p {
+    max-width: 42rem;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .Header__hero {
+    padding: 3.5rem 1.5rem 3rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    .Header__actions {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .Header__button,
+    .Header__ghostButton {
+      font-size: 0.9rem;
+      padding: 0.55rem 1.1rem;
+    }
+  }
+
+  .Header__intro {
+    padding: 2.5rem 1.5rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Header__hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    h1 {
+      font-size: 1.65rem;
+    }
+
+    h2 {
+      font-size: 0.95rem;
+    }
+
+    .Header__avatar {
+      width: 80px;
+      height: 80px;
+    }
+
+    .Header__actions {
+      flex-direction: column;
+      width: 100%;
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .Header__button,
+    .Header__ghostButton {
+      width: 100%;
+    }
+  }
+
+  .Header__intro {
+    padding: 2rem 1rem;
+
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
   }
 }

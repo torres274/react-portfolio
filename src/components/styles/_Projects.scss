@@ -1,35 +1,130 @@
+@use "../../pages/styles/variables" as *;
+
 .Projects__container {
-  padding: 5rem 1.5rem;
+  padding: 4.5rem 1.5rem 5rem;
   text-align: center;
 
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
   h2 {
-    font-size: 1.25rem;
-    flex-wrap: wrap;
+    font-size: 1.05rem;
+    max-width: 36rem;
+    margin: 0 auto 2.5rem;
 
     a {
-      color: $blue;
-      font-weight: 400;
-      transition: 0.3s;
+      color: $lightBlue;
+      font-weight: 500;
+      transition: 0.2s ease-out;
 
       &:hover,
       &:focus {
-        color: $lightBlue;
+        color: $blue;
+        text-decoration: underline;
       }
     }
   }
 }
 
 .Projects__cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  justify-items: center;
+  max-width: 56rem;
+  margin: 0 auto;
 }
 
 .ProjectsCards__container {
-  padding: 5px;
-  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(229, 231, 235, 1);
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 
   img {
-    width: 300px;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 200px;
+    transform: scale(1.02);
+    transition: transform 0.25s ease-out;
+  }
+
+  &.ProjectsCard--noImage .ProjectsCard__content {
+    padding-top: 1.5rem;
+  }
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.7);
+    box-shadow: 0 28px 80px rgba(15, 23, 42, 0.98);
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.ProjectsCard__content {
+  padding: 1.25rem 1.25rem 1.5rem;
+  text-align: left;
+  flex: 1;
+}
+
+.ProjectsCard__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: $text-on-light;
+}
+
+.ProjectsCard__subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $lightBlue;
+  margin: 0 0 0.35rem;
+}
+
+.ProjectsCard__role {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $text-on-light-muted;
+  margin: 0 0 0.6rem;
+}
+
+.ProjectsCard__description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: $text-on-light-muted;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .Projects__container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .Projects__cards {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .ProjectsCard__content {
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  .ProjectsCards__container.ProjectsCard--noImage .ProjectsCard__content {
+    padding-top: 1.25rem;
   }
 }

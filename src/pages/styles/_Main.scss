@@ -1,70 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@use "./variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
-$font-stack: "Open Sans", sans-serif;
-$white: #fff;
-$black: #0a0a0a;
-$midBlack: #141c3a;
-$blue: #1369db;
-$gray: #e6ecf8;
-$lightBlue: #48abf7;
-$lightRed: rgb(219, 92, 92);
-
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: $font-stack;
+  background: $bg-dark;
+  color: $text-on-dark;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .button {
-  transition: 0.3s;
-  background-color: transparent;
-  border: 2px solid $blue;
-  border-radius: 40px;
-  color: $blue;
-  padding: 7px 15px 7px 15px;
-  font-size: 18px;
-  font-weight: 400;
+  transition: 0.2s ease-out;
+  background: linear-gradient(135deg, $blue, $lightBlue);
+  border: 0;
+  border-radius: 999px;
+  color: $white;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+  cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: $blue;
-    border-color: $blue;
-    color: $white;
+    transform: translateY(-1px);
+    box-shadow: 0 16px 30px rgba(37, 99, 235, 0.45);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
   }
 }
 
 h1 {
   text-align: center;
-  color: $midBlack;
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.125;
+  color: $text-on-dark;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
   word-break: break-word;
 }
 
 h2 {
   text-align: center;
-  color: $midBlack;
-  font-weight: 300;
-  font-size: 1.5rem;
+  color: $text-on-dark-muted;
+  font-weight: 400;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
   word-break: break-word;
 }
 
 ul {
   font-weight: 300;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  line-height: 1.6;
   word-break: break-word;
   list-style: none;
   margin-top: 0.25em;
@@ -72,60 +80,86 @@ ul {
 
 p {
   text-align: center;
-  color: $midBlack;
+  color: $text-on-dark-muted;
   font-weight: 300;
-  font-size: 1.1rem;
-  margin-bottom: 2em;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
   word-break: break-word;
 }
 
 label {
-  margin-bottom: 0.5em;
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: rgba(41, 51, 71, 0.65);
+  margin-bottom: 0.4em;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: $text-on-light-muted;
 }
 
 input {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   font-family: $font-stack;
-  height: 2.5em;
+  height: 2.6rem;
   box-shadow: none;
-  border-radius: 4px;
-  border: 1px solid $gray;
-  padding-left: 10px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  padding: 0 0.9rem;
+  background-color: $white;
+  color: $midBlack;
 
   &:active,
   &:focus {
     outline: none;
+    border-color: $lightBlue;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
   }
 }
 
 textarea {
-  font-size: 1.4rem;
-  font-weight: 300;
-  box-shadow: none;
-  border-radius: 4px;
-  border: 1px solid $gray;
-  padding: 10px;
-  resize: vertical;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
+  box-shadow: none;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  padding: 0.75rem 0.9rem;
+  resize: vertical;
   font-family: $font-stack;
+  background-color: $white;
+  color: $midBlack;
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $lightBlue;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+  }
 }
 
 .text__blue {
   color: $blue;
-  font-weight: 400;
-  font-size: 1.12rem;
-  margin-bottom: 1em;
-  line-height: 1;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.75em;
+  line-height: 1.2;
   word-break: break-word;
 }
 
 .alert {
-  text-align: center;
+  text-align: left;
   color: $lightRed;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  .button {
+    width: 100%;
+  }
 }

@@ -1,5 +1,11 @@
+@use "../../pages/styles/variables" as *;
+
 .Navbar {
-  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: $bg-dark;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .Navbar__container {
@@ -7,44 +13,115 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2.5rem;
-  flex-wrap: wrap;
+  padding: 0.9rem min(5vw, 2.5rem);
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .Navbar__logo {
-  margin-top: 1rem;
-  height: auto;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 36px;
+    max-width: 140px;
+    width: auto;
+    object-fit: contain;
+  }
 }
 
-.Navbar__menu {
+.Navbar__right {
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-@media only screen and (max-width: 400px) {
-  .Navbar__menu {
-    flex-wrap: wrap;
-    justify-content: center;
+.Navbar__ghostButton {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid $white;
+  color: $white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.15s ease-out;
+
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
-@media only screen and (max-width: 391px) {
-  .Navbar__item {
-    margin-top: 25px;
+.Navbar__ctaButton {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: $blue;
+  color: $white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.15s ease-out;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.1);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
   }
 }
 
-.Navbar__resume {
-  color: $midBlack;
-  font-size: 18px;
-  font-weight: 300;
+.Navbar__iconButton {
+  height: 34px;
+  width: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-on-dark-muted;
+  background: transparent;
+  font-size: 0.9rem;
+  transition: 0.15s ease-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    border-color: $blue;
     color: $blue;
   }
 }
 
-.Navbar__item {
-  padding-left: 25px;
+@media (max-width: 768px) {
+  .Navbar__ghostButton,
+  .Navbar__ctaButton {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .Navbar__container {
+    padding-inline: 1.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .Navbar__container {
+    padding-inline: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .Navbar__logo img {
+    height: 32px;
+    max-width: 120px;
+  }
+
+  .Navbar__right {
+    gap: 0.5rem;
+  }
+
+  .Navbar__iconButton {
+    height: 32px;
+    width: 32px;
+    font-size: 0.85rem;
+  }
 }

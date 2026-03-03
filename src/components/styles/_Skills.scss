@@ -1,30 +1,37 @@
+@use "../../pages/styles/variables" as *;
+
 .Skills__container {
   display: flex;
   justify-content: center;
-  margin-top: -10rem;
+  margin-top: -2rem;
   margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .Skills__box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  text-align: center;
-  color: $midBlack;
-  background-color: $white;
-  border-radius: 12px;
-  box-shadow: 0px 5px 5px 0px rgba(188, 195, 209, 0.26);
+  width: min(1040px, 92vw);
+  text-align: left;
+  color: $text-on-light;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(229, 231, 235, 1);
+  position: relative;
+  z-index: 1;
 
   .Skills__column {
     display: flex;
     flex-direction: column;
     flex: 1;
-    border-bottom: 1px solid $gray;
-    border-right: 1px solid $gray;
-    padding: 60px 35px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    border-right: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 2.5rem 2.25rem;
     min-width: 200px;
-    margin-top: 10px;
+    margin-top: 0;
 
     img {
       margin-bottom: 2em;
@@ -38,11 +45,58 @@
 }
 
 .Skills__title {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+  color: $text-on-light;
 }
 
-@media only screen and (max-width: 500px) {
+.Skills__box p {
+  color: $text-on-light-muted;
+}
+
+.Skills__box .text__blue {
+  color: $blue;
+}
+
+.Skills__box ul {
+  color: $text-on-light-muted;
+}
+
+@media (max-width: 768px) {
+  .Skills__container {
+    margin-bottom: 3.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .Skills__box {
+    width: 100%;
+  }
+
+  .Skills__column {
+    min-width: min(100%, 280px);
+  }
+}
+
+@media (max-width: 640px) {
+  .Skills__container {
+    margin-top: -2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
   .Skills__column {
     border-right: none !important;
+    text-align: center;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .Skills__box {
+    border-radius: 18px;
+    box-shadow: 0 18px 55px rgba(15, 23, 42, 0.12);
+  }
+
+  .Skills__title {
+    font-size: 1.2rem;
   }
 }

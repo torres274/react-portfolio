@@ -1,60 +1,79 @@
+@use "../../pages/styles/variables" as *;
+
 .Start__container {
-  background-color: $blue;
-  padding-top: 80px;
-  height: 60px;
+  background: transparent;
+  padding: 5rem 1.5rem 4rem;
+  height: auto;
 }
 
 .Start__box {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin: -9rem 2% 0px 2%;
-  background-color: $midBlack;
-  box-shadow: 0px 5px 5px 0px rgba(41, 64, 109, 0.26);
-  border-radius: 12px;
-
-  .Start__columns {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 1rem 0px 1rem 0px;
-  }
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.25rem 2.5rem;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  border-radius: 20px;
+  border: 1px solid rgba(229, 231, 235, 1);
 
   h1 {
-    color: $white;
-    margin-bottom: 0px;
+    color: $text-on-light;
+    margin-bottom: 0.75rem;
   }
 
   h2 {
-    color: $white;
-    font-size: 1.2rem;
-    margin-bottom: 0px;
+    color: $text-on-light-muted;
+    font-size: 1.02rem;
+    margin-bottom: 1.4rem;
   }
 
   a {
     color: $white;
-    padding: 10px 30px 10px 30px;
+    padding: 0.6rem 1.6rem;
   }
 }
 
-.Start__column {
-  margin: 10px 0px 10px 0px;
+.Start__actions {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 280px;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-@media only screen and (max-width: 650px) {
-  .Start__box {
-    margin: -12rem 2% 0px 2%;
+@media (max-width: 768px) {
+  .Start__container {
+    padding: 3.5rem 1.25rem 3rem;
+  }
 
-    .Start__columns {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .Start__box {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Start__container {
+    padding: 2.5rem 1rem 2.5rem;
+  }
+
+  .Start__box {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .Start__box h1 {
+    font-size: 1.5rem;
+  }
+
+  .Start__box h2 {
+    font-size: 0.95rem;
+  }
+
+  .Start__actions {
+    flex-direction: column;
+  }
+
+  .Start__actions a {
+    width: 100%;
+    max-width: 280px;
   }
 }

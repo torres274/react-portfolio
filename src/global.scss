@@ -1,19 +1,19 @@
 // Master
-@import "./pages/styles/Main";
+@use "./pages/styles/Main" as *;
 
 // Pages
-@import "./pages/styles/Contact";
-@import "./pages/styles/NotFound";
-@import "./pages/styles/Success";
+@use "./pages/styles/Contact" as *;
+@use "./pages/styles/NotFound" as *;
+@use "./pages/styles/Success" as *;
 
 // Components
-@import "./components/styles/Form";
-@import "./components/styles/Header";
-@import "./components/styles/Navbar";
-@import "./components/styles/Projects";
-@import "./components/styles/Skills";
-@import "./components/styles/Title";
-@import "./components/styles/Start";
-@import "./components/styles/Experience";
-@import "./components/styles/ExperienceCards";
-@import "./components/styles/Footer";
+@use "./components/styles/Form" as *;
+@use "./components/styles/Header" as *;
+@use "./components/styles/Navbar" as *;
+@use "./components/styles/Projects" as *;
+@use "./components/styles/Skills" as *;
+@use "./components/styles/Title" as *;
+@use "./components/styles/Start" as *;
+@use "./components/styles/Experience" as *;
+@use "./components/styles/ExperienceCards" as *;
+@use "./components/styles/Footer" as *;

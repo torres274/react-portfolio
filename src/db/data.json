@@ -2,38 +2,46 @@
   "projects": [
     {
       "id": 1,
-      "description": "E-commerce",
-      "projectURL": "#",
-      "imageURL": "/images/projects/mouse.png"
+      "title": "Wheele",
+      "subtitle": "Peer-to-Peer (P2P) Car Rental Platform",
+      "role": "Lead Software Engineer & Architect",
+      "description": "Designed and developed a full-stack collaborative economy platform connecting vehicle owners with renters, overseeing the entire lifecycle from database architecture to mobile UI implementation.",
+      "projectURL": "#"
     },
     {
       "id": 2,
-      "description": "Dashboard",
-      "projectURL": "#",
-      "imageURL": "/images/projects/admin.png"
-    },
-    {
-      "id": 3,
-      "description": "Landing page",
-      "projectURL": "#",
-      "imageURL": "/images/projects/ids.png"
+      "title": "FitReserva",
+      "subtitle": "SaaS Fitness Management & Booking Platform",
+      "role": "Lead Software Engineer & Architect",
+      "description": "End-to-end development of a \"ClassPass-style\" SaaS platform connecting users with multiple fitness centers. The solution empowers gym owners to manage their business operations while providing users with a seamless real-time booking experience under hybrid subscription models.",
+      "projectURL": "#"
     }
   ],
   "experience": [
     {
       "id": 1,
-      "imageURL": "/images/companies/mag.jpg",
-      "description": "I worked with a team developing an activity management system and a reporting system in C#. We used ASP.NET Web Forms, Visual Studio Team Foundation Server and Microsoft SQL Server."
+      "imageFile": "accenture-logo.png",
+      "description": "Accenture — Senior Software Engineer (Nov 2025 - Present). Designing and developing automation scripts and internal microservices to streamline CI/CD workflows, implementing blue‑green deployments and standardizing environment configurations for high‑availability AEM environments."
     },
     {
       "id": 2,
-      "imageURL": "/images/companies/mouse.png",
-      "description": "I created a website developed in PHP with Laravel framework and I used the technologies JavaScript, jQuery, AJAX, MySQL and GitHub. The website was develop for the sale of electronic products (e-commerce). Also has an administrative section for the control of products, inventories, orders and users."
+      "imageFile": "transunion-logo.png",
+      "description": "TransUnion — Senior Software Engineer (Sep 2024 - Nov 2025). Designed microservices architecture for high‑traffic applications, reduced vulnerabilities with a security‑first approach and Checkmarx integration, and built scalable cloud functions in GCP using Python and event‑driven components (Pub/Sub)."
     },
     {
       "id": 3,
-      "imageURL": "/images/companies/ids.jpg",
-      "description": "I created a informative website developed in PHP. The website was develop to provide clients with information about consultancies for environmental management and industrial products."
+      "imageFile": "accenture-logo.png",
+      "description": "Accenture — Senior Software Engineer (Jun 2023 - Sep 2024). Led migration of monolithic applications to microservices with Spring Cloud, streamlined CI/CD with Jenkins and integrated AWS services to improve scalability and reduce infrastructure costs."
+    },
+    {
+      "id": 4,
+      "imageFile": "accenture-logo.png",
+      "description": "Accenture — Software Engineer (Aug 2021 - May 2023). Built OSGi service components for Adobe Experience Manager (AEM), delivered solutions aligned with coding standards and CI best practices, and designed GraphQL endpoints to provide flexible data retrieval."
+    },
+    {
+      "id": 5,
+      "imageFile": "sysco-logo.png",
+      "description": "Sysco — Software Engineer (Nov 2019 - Aug 2021). Built full‑stack web applications and RESTful APIs, optimized complex SQL queries and stored procedures in Oracle/PostgreSQL and integrated third‑party services into client solutions."
     }
   ]
 }
