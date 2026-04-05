@@ -21,27 +21,42 @@
     {
       "id": 1,
       "imageFile": "accenture-logo.png",
-      "description": "Accenture — Senior Software Engineer (Nov 2025 - Present). Designing and developing automation scripts and internal microservices to streamline CI/CD workflows, implementing blue‑green deployments and standardizing environment configurations for high‑availability AEM environments."
+      "company": "Accenture",
+      "role": "Senior Software Engineer",
+      "period": "Nov 2025 – Present",
+      "description": "Designing and developing automation scripts and internal microservices to streamline CI/CD workflows, implementing blue-green deployments and standardizing environment configurations for high-availability AEM environments."
     },
     {
       "id": 2,
       "imageFile": "transunion-logo.png",
-      "description": "TransUnion — Senior Software Engineer (Sep 2024 - Nov 2025). Designed microservices architecture for high‑traffic applications, reduced vulnerabilities with a security‑first approach and Checkmarx integration, and built scalable cloud functions in GCP using Python and event‑driven components (Pub/Sub)."
+      "company": "TransUnion",
+      "role": "Senior Software Engineer",
+      "period": "Sep 2024 – Nov 2025",
+      "description": "Designed microservices architecture for high-traffic applications, reduced vulnerabilities with a security-first approach and Checkmarx integration, and built scalable cloud functions in GCP using Python and event-driven components (Pub/Sub)."
     },
     {
       "id": 3,
       "imageFile": "accenture-logo.png",
-      "description": "Accenture — Senior Software Engineer (Jun 2023 - Sep 2024). Led migration of monolithic applications to microservices with Spring Cloud, streamlined CI/CD with Jenkins and integrated AWS services to improve scalability and reduce infrastructure costs."
+      "company": "Accenture",
+      "role": "Senior Software Engineer",
+      "period": "Jun 2023 – Sep 2024",
+      "description": "Led migration of monolithic applications to microservices with Spring Cloud, streamlined CI/CD with Jenkins and integrated AWS services to improve scalability and reduce infrastructure costs."
     },
     {
       "id": 4,
       "imageFile": "accenture-logo.png",
-      "description": "Accenture — Software Engineer (Aug 2021 - May 2023). Built OSGi service components for Adobe Experience Manager (AEM), delivered solutions aligned with coding standards and CI best practices, and designed GraphQL endpoints to provide flexible data retrieval."
+      "company": "Accenture",
+      "role": "Software Engineer",
+      "period": "Aug 2021 – May 2023",
+      "description": "Built OSGi service components for Adobe Experience Manager (AEM), delivered solutions aligned with coding standards and CI best practices, and designed GraphQL endpoints to provide flexible data retrieval."
     },
     {
       "id": 5,
       "imageFile": "sysco-logo.png",
-      "description": "Sysco — Software Engineer (Nov 2019 - Aug 2021). Built full‑stack web applications and RESTful APIs, optimized complex SQL queries and stored procedures in Oracle/PostgreSQL and integrated third‑party services into client solutions."
+      "company": "Sysco",
+      "role": "Software Engineer",
+      "period": "Nov 2019 – Aug 2021",
+      "description": "Built full-stack web applications and RESTful APIs, optimized complex SQL queries and stored procedures in Oracle/PostgreSQL and integrated third-party services into client solutions."
     }
   ]
 }

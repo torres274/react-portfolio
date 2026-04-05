@@ -5,23 +5,37 @@ import resume from '../download/Daniel Torres Calvo - Resume.pdf'
 
 const Header = () => {
     return (
-        <React.Fragment>
-            <header id="about" className="Header">
-                <div className="Header__hero">
-                    <h1>Senior Software Engineer</h1>
-                    <h2>7+ years designing and building backend and full stack solutions for global enterprises.</h2>
-                    <img src={avatar} alt="Portrait illustration of Daniel" className="Header__avatar" />
-                    <div className="Header__actions">
-                        <a href="#projects" className="Header__button">View Projects</a>
-                        <a href={resume} className="Header__ghostButton" target="_blank" rel="noreferrer">Download Resume</a>
-                    </div>
+        <header id="about" className="Header">
+            <div className="Header__hero">
+                <div className="Header__badge">
+                    <span className="Header__badge-dot" aria-hidden="true" />
+                    Open to opportunities
                 </div>
-                <div className="Header__intro">
-                    <h3>Hi, I'm Daniel. Senior Software Engineer.</h3>
-                    <p>I design and implement scalable backend and full stack solutions, bridging the gap between complex software design and high-availability production environments.</p>
+                <h1 className="Header__headline">
+                    Senior Software Engineer
+                </h1>
+                <p className="Header__sub">
+                    7+ years designing and building backend and full-stack solutions
+                    for global enterprises — from microservices at scale to cloud-native infrastructure.
+                </p>
+                <img
+                    src={avatar}
+                    alt="Portrait illustration of Daniel Torres"
+                    className="Header__avatar"
+                    width="96"
+                    height="96"
+                />
+                <div className="Header__actions">
+                    <a href="#projects" className="Header__button">View Projects</a>
+                    <a href={resume} className="Header__ghostButton" target="_blank" rel="noreferrer">
+                        Download Resume
+                    </a>
                 </div>
-            </header>
-        </React.Fragment>
+                <a href="#skills" className="Header__scroll" aria-label="Scroll to skills section">
+                    <span className="Header__scroll-chevron" aria-hidden="true" />
+                </a>
+            </div>
+        </header>
     )
 }
 

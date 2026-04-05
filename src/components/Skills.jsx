@@ -10,7 +10,7 @@ const Skills = () => {
                 <div className="Skills__box">
                     <div className="Skills__column">
                         <img src={code} alt="Code" height="48" />
-                        <h1 className="Skills__title">Backend & Full Stack</h1>
+                        <h3 className="Skills__title">Backend & Full Stack</h3>
                         <p>I specialize in designing and implementing scalable backend services and full stack solutions.</p>
                         <p className="text__blue">Backend:</p>
                         <p>Java (Spring Boot), Python (Flask)</p>
@@ -25,7 +25,7 @@ const Skills = () => {
 
                     <div className="Skills__column">
                         <img src={tools} alt="Tools" height="48" />
-                        <h1 className="Skills__title">Cloud & DevOps</h1>
+                        <h3 className="Skills__title">Cloud & DevOps</h3>
                         <p>I help teams ship reliably by combining software engineering with modern DevOps practices.</p>
                         <p className="text__blue">Cloud / DevOps:</p>
                         <ul>
@@ -39,7 +39,7 @@ const Skills = () => {
 
                     <div className="Skills__column">
                         <img src={code} alt="Code" height="48" />
-                        <h1 className="Skills__title">Databases & Other</h1>
+                        <h3 className="Skills__title">Databases & Other</h3>
                         <p>I work with relational and NoSQL databases and a variety of enterprise tools.</p>
                         <p className="text__blue">Databases:</p>
                         <p>Oracle, PostgreSQL, MySQL, DynamoDB</p>

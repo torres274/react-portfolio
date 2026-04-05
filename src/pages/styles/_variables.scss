@@ -5,7 +5,7 @@ $black: #0f172a;
 $midBlack: #111827;
 $blue: #2563eb;
 $gray: #e5e7eb;
-$lightBlue: #2563eb;
+$lightBlue: $blue; // alias — prefer $blue directly
 $lightRed: #ef4444;
 $bg-surface: #f9fafb;
 $bg-soft: #eef2ff;

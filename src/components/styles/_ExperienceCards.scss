@@ -36,6 +36,26 @@
   display: block;
 }
 
+.Experience__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.Experience__role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $blue;
+}
+
+.Experience__period {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: $text-on-light-muted;
+}
+
 @media (max-width: 640px) {
   .Experience__column {
     padding: 1.5rem 1.25rem;

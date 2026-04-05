@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright } from '@fortawesome/free-regular-svg-icons'
-import { faLinkedinIn, faGit } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import logo from '../images/logos/logo-white.png'
 
@@ -23,7 +23,7 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
                     <a className="Footer__social" href="https://github.com/torres274" rel="noreferrer noopener" target="_blank" aria-label="Visit my GitHub profile">
-                        <FontAwesomeIcon icon={faGit} />
+                        <FontAwesomeIcon icon={faGithub} />
                     </a>
                 </div>
 
