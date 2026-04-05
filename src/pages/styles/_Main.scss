@@ -1,5 +1,6 @@
 @use "./variables" as *;
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+// Google Fonts is loaded via <link> in index.html for better performance.
+// Keeping the @import here would create a render-blocking second request.
 
 *,
 *::before,

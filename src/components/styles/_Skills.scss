@@ -22,46 +22,88 @@
   border: 1px solid rgba(229, 231, 235, 1);
   position: relative;
   z-index: 1;
+}
 
-  .Skills__column {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-    border-right: 1px solid rgba(148, 163, 184, 0.2);
-    padding: 2.5rem 2.25rem;
-    min-width: 200px;
-    margin-top: 0;
+.Skills__column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 2.5rem 2.25rem;
+  min-width: 200px;
 
-    img {
-      margin-bottom: 2em;
-    }
+  img {
+    margin-bottom: 1.25rem;
+  }
 
-    &:last-child {
-      border-right: none;
-      border-bottom: none;
-    }
+  &:last-child {
+    border-right: none;
   }
 }
 
-.Skills__title { // h3 — scoped override
-  font-size: 1.35rem;
-  margin-bottom: 0.85rem;
+// h3 scoped override
+.Skills__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
   color: $text-on-light;
+  text-align: left;
 }
 
-.Skills__box p {
+.Skills__description {
+  font-size: 0.88rem;
   color: $text-on-light-muted;
+  line-height: 1.55;
+  margin-bottom: 1.4rem;
+  text-align: left;
 }
 
-.Skills__box .text__blue {
+// Category block (label + pill row)
+.Skills__category {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Skills__category-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: $blue;
+  margin-bottom: 0.45rem;
 }
 
-.Skills__box ul {
-  color: $text-on-light-muted;
+// Pill badges
+.Skills__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
+.Skills__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: $bg-soft;       // #eef2ff — light blue tint
+  color: $blue;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  white-space: nowrap;
+  transition: background 0.15s ease-out, border-color 0.15s ease-out;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.35);
+  }
+}
+
+// ─── Responsive ─────────────────────────────────────────────────��────
 @media (max-width: 768px) {
   .Skills__container {
     margin-bottom: 3.5rem;
@@ -86,17 +128,20 @@
 
 @media (max-width: 500px) {
   .Skills__column {
-    border-right: none !important;
-    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     padding: 1.75rem 1.5rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 
   .Skills__box {
     border-radius: 18px;
-    box-shadow: 0 18px 55px rgba(15, 23, 42, 0.12);
   }
 
-  .Skills__title { // h3 — scoped override
-    font-size: 1.2rem;
+  .Skills__title {
+    font-size: 1.1rem;
   }
 }

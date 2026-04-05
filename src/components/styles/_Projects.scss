@@ -14,13 +14,13 @@
     margin: 0 auto 2.5rem;
 
     a {
-      color: $lightBlue;
+      color: $blue;
       font-weight: 500;
-      transition: 0.2s ease-out;
+      transition: color 0.15s ease-out;
 
       &:hover,
-      &:focus {
-        color: $blue;
+      &:focus-visible {
+        color: #1d4ed8; // equivalent to darken($blue, 10%)
         text-decoration: underline;
       }
     }
@@ -43,20 +43,19 @@
   background: #ffffff;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
   border: 1px solid rgba(229, 231, 235, 1);
-  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
   display: flex;
   flex-direction: column;
   min-width: 0;
 
   img {
     width: 100%;
-    max-width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
     max-height: 200px;
     transform: scale(1.02);
-    transition: transform 0.25s ease-out;
+    transition: transform 0.28s ease-out;
   }
 
   &.ProjectsCard--noImage .ProjectsCard__content {
@@ -65,50 +64,107 @@
 
   &:hover,
   &:focus-within {
-    transform: translateY(-4px);
-    border-color: rgba(96, 165, 250, 0.7);
-    box-shadow: 0 28px 80px rgba(15, 23, 42, 0.98);
+    transform: translateY(-5px);
+    border-color: rgba(96, 165, 250, 0.6);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.13);
 
     img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
   }
 }
 
 .ProjectsCard__content {
-  padding: 1.25rem 1.25rem 1.5rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ProjectsCard__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+  color: $text-on-light;
+  text-align: left;
+}
+
+.ProjectsCard__subtitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: $blue;
+  margin: 0 0 0.25rem;
+  text-align: left;
+}
+
+.ProjectsCard__role {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: $text-on-light-muted;
+  margin: 0 0 0.65rem;
+  text-align: left;
+}
+
+.ProjectsCard__description {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: $text-on-light-muted;
+  margin: 0 0 1rem;
   text-align: left;
   flex: 1;
 }
 
-.ProjectsCard__title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin: 0 0 0.25rem;
-  color: $text-on-light;
+// Tech stack pill badges
+.ProjectsCard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
 }
 
-.ProjectsCard__subtitle {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: $lightBlue;
-  margin: 0 0 0.35rem;
-}
-
-.ProjectsCard__role {
-  font-size: 0.8rem;
+.ProjectsCard__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.73rem;
   font-weight: 500;
-  color: $text-on-light-muted;
-  margin: 0 0 0.6rem;
+  background: $bg-soft;
+  color: $blue;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  white-space: nowrap;
 }
 
-.ProjectsCard__description {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: $text-on-light-muted;
-  margin: 0;
+// View Project CTA link
+.ProjectsCard__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $blue;
+  margin-top: auto;
+  transition: gap 0.15s ease-out, color 0.15s ease-out;
+
+  &:hover,
+  &:focus-visible {
+    color: #1d4ed8; // equivalent to darken($blue, 10%)
+    gap: 0.55rem;
+  }
 }
 
+.ProjectsCard__cta-arrow {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.15s ease-out;
+
+  .ProjectsCard__cta:hover & {
+    transform: translateX(3px);
+  }
+}
+
+// ─── Responsive ──────────────────────────────────────────────────────
 @media (max-width: 640px) {
   .Projects__container {
     padding-left: 1rem;
@@ -121,7 +177,7 @@
   }
 
   .ProjectsCard__content {
-    padding: 1rem 1rem 1.25rem;
+    padding: 1rem 1.25rem 1.25rem;
   }
 
   .ProjectsCards__container.ProjectsCard--noImage .ProjectsCard__content {

@@ -7,6 +7,7 @@
   padding-right: 1rem;
 }
 
+// .Experience__box is now rendered by ExperienceCards (motion.div)
 .Experience__box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

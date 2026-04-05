@@ -87,7 +87,19 @@
   letter-spacing: -0.04em;
   line-height: 1.05;
   margin-bottom: 1.1rem;
-  // Gradient text: white → light blue for depth
+  // position: relative anchors AnimatePresence's popLayout absolute exit
+  position: relative;
+  // Prevent height collapse during AnimatePresence transition
+  min-height: 1.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// The gradient is on the span so background-clip applies to the cycling text
+.Header__headline-text {
+  display: block;
+  text-align: center;
   background: linear-gradient(135deg, #ffffff 55%, #93c5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

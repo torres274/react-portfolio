@@ -1,12 +1,45 @@
 @use "../../pages/styles/variables" as *;
 
+@keyframes startGlow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
 .Start__container {
-  background: transparent;
+  position: relative;
   padding: 5rem 1.5rem 4rem;
   height: auto;
+
+  // Animated radial glow behind the CTA card
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 70% 55% at 50% 50%,
+      rgba(37, 99, 235, 0.08) 0%,
+      transparent 70%
+    );
+    animation: startGlow 5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+      opacity: 0.6;
+    }
+  }
 }
 
 .Start__box {
+  position: relative;
+  z-index: 1;    // above the glow pseudo-element
   max-width: 760px;
   margin: 0 auto;
   padding: 2.25rem 2.5rem;
@@ -15,6 +48,12 @@
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
   border-radius: 20px;
   border: 1px solid rgba(229, 231, 235, 1);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1),
+                0 0 0 1px rgba(37, 99, 235, 0.08);
+  }
 
   h1 {
     color: $text-on-light;

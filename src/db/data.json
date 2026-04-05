@@ -6,6 +6,7 @@
       "subtitle": "Peer-to-Peer (P2P) Car Rental Platform",
       "role": "Lead Software Engineer & Architect",
       "description": "Designed and developed a full-stack collaborative economy platform connecting vehicle owners with renters, overseeing the entire lifecycle from database architecture to mobile UI implementation.",
+      "tags": ["React Native", "Spring Boot", "PostgreSQL", "AWS", "REST API"],
       "projectURL": "#"
     },
     {
@@ -13,7 +14,8 @@
       "title": "FitReserva",
       "subtitle": "SaaS Fitness Management & Booking Platform",
       "role": "Lead Software Engineer & Architect",
-      "description": "End-to-end development of a \"ClassPass-style\" SaaS platform connecting users with multiple fitness centers. The solution empowers gym owners to manage their business operations while providing users with a seamless real-time booking experience under hybrid subscription models.",
+      "description": "End-to-end development of a \"ClassPass-style\" SaaS platform connecting users with multiple fitness centers. Empowers gym owners to manage operations while providing users a seamless real-time booking experience.",
+      "tags": ["React", "Java", "Spring Boot", "MySQL", "GCP", "Docker"],
       "projectURL": "#"
     }
   ],
