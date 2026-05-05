@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Block pages that don't need to be indexed
-Disallow: /contact
-Disallow: /success
-
-Sitemap: https://danieltorrescalvo.com/sitemap.xml
