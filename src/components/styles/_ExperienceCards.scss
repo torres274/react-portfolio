@@ -13,7 +13,13 @@
 
   p {
     color: $text-on-light-muted;
-    text-align: center;
+    text-align: justify;
+    text-align-last: left;
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 }
 

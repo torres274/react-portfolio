@@ -55,7 +55,10 @@
   color: $text-on-light-muted;
   line-height: 1.55;
   margin-bottom: 1.4rem;
-  text-align: left;
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 // Category block (label + pill row)
