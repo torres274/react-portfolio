@@ -21,8 +21,8 @@ const SKILLS = [
         title: 'Cloud & DevOps',
         description: 'Reliable delivery pipelines combining software engineering with modern DevOps practices.',
         categories: [
-            { label: 'Cloud',     tags: ['GCP', 'AWS'] },
-            { label: 'CI/CD',     tags: ['Jenkins', 'Bitbucket Pipelines', 'Docker'] },
+            { label: 'Cloud',     tags: ['GCP', 'AWS', 'Azure'] },
+            { label: 'CI/CD',     tags: ['Jenkins', 'Bitbucket Pipelines', 'Docker', 'GitHub Actions'] },
             { label: 'Practices', tags: ['Git', 'Agile / Scrum', 'SDLC'] },
         ],
     },
