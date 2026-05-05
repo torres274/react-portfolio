@@ -5,4 +5,4 @@ Allow: /
 Disallow: /contact
 Disallow: /success
 
-Sitemap: https://daniel-torres-calvo.netlify.app/sitemap.xml
+Sitemap: https://danieltorrescalvo.com/sitemap.xml
