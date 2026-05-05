@@ -106,7 +106,25 @@
   }
 }
 
-// ─── Responsive ─────────────────────────────────────────────────��────
+// --- Responsive ---
+@media (max-width: 900px) {
+  // Single-column stack so separators stay visible between groups (avoids 2+1 flex
+  // wrap where only border-right is drawn and horizontal dividers disappear).
+  .Skills__box {
+    flex-direction: column;
+  }
+
+  .Skills__column {
+    min-width: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .Skills__container {
     margin-bottom: 3.5rem;
@@ -131,13 +149,7 @@
 
 @media (max-width: 500px) {
   .Skills__column {
-    border-right: none;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     padding: 1.75rem 1.5rem;
-
-    &:last-child {
-      border-bottom: none;
-    }
   }
 
   .Skills__box {

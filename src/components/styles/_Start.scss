@@ -75,6 +75,7 @@
 .Start__actions {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
@@ -86,6 +87,12 @@
 
   .Start__box {
     padding: 1.75rem 1.5rem;
+  }
+
+  .Start__box h2 {
+    text-align: justify;
+    hyphens: auto;
+    text-wrap: pretty;
   }
 }
 
@@ -109,10 +116,14 @@
 
   .Start__actions {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .Start__actions a {
     width: 100%;
     max-width: 280px;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
