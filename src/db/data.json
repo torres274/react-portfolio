@@ -15,7 +15,7 @@
       "title": "Flexy",
       "subtitle": "SaaS Fitness Management & Booking Platform",
       "role": "Lead Software Engineer & Architect",
-      "description": "End-to-end development of a \"ClassPass-style\" SaaS platform connecting users with multiple fitness centers. Empowers gym owners to manage operations while providing users a seamless real-time booking experience.",
+      "description": "Led end-to-end development of a ClassPass-style SaaS platform connecting users with multiple fitness centers, enabling gym operators to manage operations while delivering a seamless real-time booking experience.",
       "tags": ["React", "Java", "Spring Boot", "MySQL", "GCP", "Docker"],
       "imageFile": "/images/companies/flexy.jpg",
       "projectURL": "#"
@@ -25,7 +25,7 @@
       "title": "MAG",
       "subtitle": "Reporting & Business Intelligence Dashboard",
       "role": "Software Engineer",
-      "description": "Built a reporting and information dashboard platform focused on KPI visibility, historical trends, and operational insights for business stakeholders.",
+      "description": "Developed a reporting and business intelligence dashboard focused on KPI visibility, historical trends, and operational insights for decision-makers.",
       "tags": ["C#", ".NET", "SQL Server", "Power BI", "REST API"],
       "imageFile": "/images/companies/mag.jpg",
       "projectURL": "#"
@@ -35,7 +35,7 @@
       "title": "Blue Royale Spa",
       "subtitle": "Website & Reservation System",
       "role": "Full Stack Engineer",
-      "description": "Developed a modern spa website with an integrated booking flow, service catalog, schedule management, and content-driven pages for marketing and conversions.",
+      "description": "Built a modern website and reservation flow for a spa business, including service catalog management, scheduling, and content-driven pages optimized for conversion.",
       "tags": ["React", "TypeScript", "Vercel", "Cal.com", "Sanity", "Node.js"],
       "imageFile": "/images/companies/blue-royale-spa.png",
       "projectURL": "#"
@@ -45,7 +45,7 @@
       "title": "Mouse",
       "subtitle": "E-commerce Platform for Electronics",
       "role": "Full Stack Engineer",
-      "description": "Built an online electronics store including product catalog, cart and checkout flows, inventory administration, and order management for daily operations.",
+      "description": "Delivered an e-commerce platform for electronics with product catalog, cart and checkout flows, inventory administration, and order management for daily operations.",
       "tags": ["PHP", "Laravel", "MySQL", "HTML5", "CSS3", "JavaScript"],
       "imageFile": "/images/companies/mouse.png",
       "projectURL": "#"
@@ -56,9 +56,9 @@
       "id": 1,
       "imageFile": "accenture-logo.png",
       "company": "Accenture",
-      "role": "Senior Software Engineer",
+      "role": "Senior Software Engineer - Generative AI & Enterprise Search",
       "period": "Nov 2025 – Present",
-      "description": "Designing and developing automation scripts and internal microservices to streamline CI/CD workflows, implementing blue-green deployments and standardizing environment configurations for high-availability AEM environments."
+      "description": "Designed and implemented high-performance data ingestion pipelines with Aspire 5, automating crawling, extraction, and cleansing across heterogeneous sources. Developed Groovy scripts for real-time transformation and normalization, leveraged Elasticsearch for enterprise-scale retrieval, and delivered Power BI dashboards for actionable KPI insights."
     },
     {
       "id": 2,
@@ -66,7 +66,7 @@
       "company": "TransUnion",
       "role": "Senior Software Engineer",
       "period": "Sep 2024 – Nov 2025",
-      "description": "Designed microservices architecture for high-traffic applications, reduced vulnerabilities with a security-first approach and Checkmarx integration, and built scalable cloud functions in GCP using Python and event-driven components (Pub/Sub)."
+      "description": "Designed microservices architecture for high-traffic applications to improve scalability and reduce downtime. Reduced production vulnerabilities through a security-first approach with Checkmarx integration, architected scalable GCP cloud functions in Python, and maintained event-driven components (Pub/Sub) with CI/CD in Bitbucket Pipelines."
     },
     {
       "id": 3,
@@ -74,7 +74,7 @@
       "company": "Accenture",
       "role": "Senior Software Engineer",
       "period": "Jun 2023 – Sep 2024",
-      "description": "Led migration of monolithic applications to microservices with Spring Cloud, streamlined CI/CD with Jenkins and integrated AWS services to improve scalability and reduce infrastructure costs."
+      "description": "Led migration of 4+ monolithic applications to Spring Cloud microservices, improving deployment efficiency by 30%. Streamlined CI/CD pipelines with Jenkins for faster, more reliable releases, and integrated AWS services to improve scalability while reducing infrastructure costs."
     },
     {
       "id": 4,
@@ -82,7 +82,7 @@
       "company": "Accenture",
       "role": "Software Engineer",
       "period": "Aug 2021 – May 2023",
-      "description": "Built OSGi service components for Adobe Experience Manager (AEM), delivered solutions aligned with coding standards and CI best practices, and designed GraphQL endpoints to provide flexible data retrieval."
+      "description": "Built OSGi service components for Adobe Experience Manager (AEM) to improve content delivery. Delivered features aligned with coding standards, unit testing, and CI best practices, collaborated closely with product owners in agile sprints, and designed GraphQL endpoints for flexible data retrieval."
     },
     {
       "id": 5,
@@ -90,7 +90,7 @@
       "company": "Sysco",
       "role": "Software Engineer",
       "period": "Nov 2019 – Aug 2021",
-      "description": "Built full-stack web applications and RESTful APIs, optimized complex SQL queries and stored procedures in Oracle/PostgreSQL and integrated third-party services into client solutions."
+      "description": "Built full-stack web applications and RESTful APIs, and optimized complex SQL queries and stored procedures in Oracle/PostgreSQL to improve reporting performance. Integrated third-party services into client solutions and collaborated with cross-functional teams to deliver within scope and deadlines."
     }
   ]
 }

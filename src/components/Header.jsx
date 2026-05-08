@@ -46,8 +46,8 @@ const Header = () => {
                 </h1>
 
                 <p className="Header__sub">
-                    7+ years designing and building backend and full-stack solutions
-                    for global enterprises — from microservices at scale to cloud-native infrastructure.
+                    7+ years delivering backend and full-stack solutions for global enterprises,
+                    from large-scale microservices to resilient cloud-native platforms.
                 </p>
                 <img
                     src={avatar}
