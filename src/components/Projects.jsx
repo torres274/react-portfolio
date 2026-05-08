@@ -4,10 +4,20 @@ import projectsData from '../db/data.json'
 
 const Projects = () => {
     const { projects } = projectsData
+    const hiddenProjectIds = useMemo(() => new Set([1]), [])
+    const visibleProjects = useMemo(
+        () => projects.filter((project) => !hiddenProjectIds.has(project.id)),
+        [projects, hiddenProjectIds]
+    )
+
     const carouselProjects = useMemo(() => {
-        if (projects.length === 0) return []
-        return [projects[projects.length - 1], ...projects, projects[0]]
-    }, [projects])
+        if (visibleProjects.length === 0) return []
+        return [
+            visibleProjects[visibleProjects.length - 1],
+            ...visibleProjects,
+            visibleProjects[0],
+        ]
+    }, [visibleProjects])
 
     const [activeIndex, setActiveIndex] = useState(1)
     const [isPaused, setIsPaused] = useState(false)
@@ -15,12 +25,12 @@ const Projects = () => {
 
     const goNext = () => {
         setIsTransitionEnabled(true)
-        setActiveIndex((prev) => (prev >= projects.length + 1 ? 1 : prev + 1))
+        setActiveIndex((prev) => (prev >= visibleProjects.length + 1 ? 1 : prev + 1))
     }
 
     const goPrev = () => {
         setIsTransitionEnabled(true)
-        setActiveIndex((prev) => (prev <= 0 ? projects.length : prev - 1))
+        setActiveIndex((prev) => (prev <= 0 ? visibleProjects.length : prev - 1))
     }
 
     const goTo = (realIndex) => {
@@ -29,13 +39,13 @@ const Projects = () => {
     }
 
     useEffect(() => {
-        if (isPaused || projects.length <= 1) return undefined
+        if (isPaused || visibleProjects.length <= 1) return undefined
         const timer = setInterval(() => {
             goNext()
         }, 2800)
 
         return () => clearInterval(timer)
-    }, [isPaused, projects.length])
+    }, [isPaused, visibleProjects.length])
 
     useEffect(() => {
         const onVisibilityChange = () => {
@@ -49,18 +59,18 @@ const Projects = () => {
 
     useEffect(() => {
         // Safety guard in case activeIndex drifts outside expected bounds
-        if (projects.length === 0) return
-        if (activeIndex < 0 || activeIndex > projects.length + 1) {
+        if (visibleProjects.length === 0) return
+        if (activeIndex < 0 || activeIndex > visibleProjects.length + 1) {
             setIsTransitionEnabled(false)
             setActiveIndex(1)
         }
-    }, [activeIndex, projects.length])
+    }, [activeIndex, visibleProjects.length])
 
     const handleTransitionEnd = () => {
         if (activeIndex === 0) {
             setIsTransitionEnabled(false)
-            setActiveIndex(projects.length)
-        } else if (activeIndex === projects.length + 1) {
+            setActiveIndex(visibleProjects.length)
+        } else if (activeIndex === visibleProjects.length + 1) {
             setIsTransitionEnabled(false)
             setActiveIndex(1)
         }
@@ -76,8 +86,8 @@ const Projects = () => {
         return undefined
     }, [isTransitionEnabled])
 
-    const visibleIndex = projects.length > 0
-        ? ((activeIndex - 1 + projects.length) % projects.length)
+    const visibleIndex = visibleProjects.length > 0
+        ? ((activeIndex - 1 + visibleProjects.length) % visibleProjects.length)
         : 0
 
     return (
@@ -105,7 +115,7 @@ const Projects = () => {
                         onTransitionEnd={handleTransitionEnd}
                     >
                         {carouselProjects.map((project, index) => {
-                            const normalizedIndex = (index - 1 + projects.length) % projects.length
+                            const normalizedIndex = (index - 1 + visibleProjects.length) % visibleProjects.length
                             const isActive = normalizedIndex === visibleIndex
                             const isClone = index === 0 || index === carouselProjects.length - 1
                             const isAdjacent = Math.abs(index - activeIndex) === 1
