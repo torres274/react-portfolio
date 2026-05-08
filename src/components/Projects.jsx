@@ -94,8 +94,8 @@ const Projects = () => {
         <div id="projects" className="Projects__container">
             <h1>My Recent Work</h1>
             <h2>
-                Here are a few projects I've worked on recently.{' '}
-                <a href="mailto:daniel.torres96@hotmail.com">Want to see more?</a>
+                Representative work across product types and stacks.{' '}
+                <a href="mailto:daniel.torres96@hotmail.com">Ask me about other engagements.</a>
             </h2>
 
             <div className="Projects__carousel">

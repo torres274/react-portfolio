@@ -45,7 +45,7 @@ const Main = () => (
         <FadeUp delay={0.04}>
             <Title
                 title="Professional Experience"
-                subtitle="A snapshot of the roles where I've led and contributed to building reliable, secure and scalable systems."
+                subtitle="Selected organizations where I've helped deliver reliable, secure, and scalable software."
             />
         </FadeUp>
 

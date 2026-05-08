@@ -15,7 +15,7 @@
       "title": "Flexy",
       "subtitle": "SaaS Fitness Management & Booking Platform",
       "role": "Lead Software Engineer & Architect",
-      "description": "Led end-to-end development of a ClassPass-style SaaS platform connecting users with multiple fitness centers, enabling gym operators to manage operations while delivering a seamless real-time booking experience.",
+      "description": "End-to-end delivery of a ClassPass-style fitness SaaS: multi-tenant booking, gym operations, and a real-time experience for members across partner locations.",
       "tags": ["React", "Java", "Spring Boot", "MySQL", "GCP", "Docker"],
       "imageFile": "/images/companies/flexy.jpg",
       "projectURL": "#"
@@ -25,7 +25,7 @@
       "title": "MAG",
       "subtitle": "Reporting & Business Intelligence Dashboard",
       "role": "Software Engineer",
-      "description": "Developed a reporting and business intelligence dashboard focused on KPI visibility, historical trends, and operational insights for decision-makers.",
+      "description": "Reporting and BI dashboard with KPI tracking, historical trends, and operational views tailored for business stakeholders.",
       "tags": ["C#", ".NET", "SQL Server", "Power BI", "REST API"],
       "imageFile": "/images/companies/mag.jpg",
       "projectURL": "#"
@@ -35,7 +35,7 @@
       "title": "Blue Royale Spa",
       "subtitle": "Website & Reservation System",
       "role": "Full Stack Engineer",
-      "description": "Built a modern website and reservation flow for a spa business, including service catalog management, scheduling, and content-driven pages optimized for conversion.",
+      "description": "Marketing site and reservation experience for a spa: service catalog, scheduling, and content-led pages aimed at bookings and conversions.",
       "tags": ["React", "TypeScript", "Vercel", "Cal.com", "Sanity", "Node.js"],
       "imageFile": "/images/companies/blue-royale-spa.png",
       "projectURL": "#"
@@ -45,7 +45,7 @@
       "title": "Mouse",
       "subtitle": "E-commerce Platform for Electronics",
       "role": "Full Stack Engineer",
-      "description": "Delivered an e-commerce platform for electronics with product catalog, cart and checkout flows, inventory administration, and order management for daily operations.",
+      "description": "E-commerce for electronics: catalog, cart and checkout, inventory, and order handling for day-to-day retail operations.",
       "tags": ["PHP", "Laravel", "MySQL", "HTML5", "CSS3", "JavaScript"],
       "imageFile": "/images/companies/mouse.png",
       "projectURL": "#"
@@ -56,41 +56,22 @@
       "id": 1,
       "imageFile": "accenture-logo.png",
       "company": "Accenture",
-      "role": "Senior Software Engineer - Generative AI & Enterprise Search",
-      "period": "Nov 2025 – Present",
-      "description": "Designed and implemented high-performance data ingestion pipelines with Aspire 5, automating crawling, extraction, and cleansing across heterogeneous sources. Developed Groovy scripts for real-time transformation and normalization, leveraged Elasticsearch for enterprise-scale retrieval, and delivered Power BI dashboards for actionable KPI insights."
+      "role": "Software Engineer",
+      "description": "Enterprise search and data: Aspire 5 ingestion, Groovy transformations, Elasticsearch, and Power BI for operational visibility. Monolith-to-microservices work with Spring Cloud, Jenkins CI/CD, and AWS for scale and cost-aware delivery. Adobe Experience Manager (AEM) with OSGi and GraphQL, working closely with product teams under strong testing and CI practices."
     },
     {
       "id": 2,
       "imageFile": "transunion-logo.png",
       "company": "TransUnion",
       "role": "Senior Software Engineer",
-      "period": "Sep 2024 – Nov 2025",
-      "description": "Designed microservices architecture for high-traffic applications to improve scalability and reduce downtime. Reduced production vulnerabilities through a security-first approach with Checkmarx integration, architected scalable GCP cloud functions in Python, and maintained event-driven components (Pub/Sub) with CI/CD in Bitbucket Pipelines."
+      "description": "Microservices architecture for high-traffic workloads, improving scalability and resilience. Hardened releases with Checkmarx and a security-first mindset. Python-based GCP Cloud Functions, event-driven patterns with Pub/Sub, and CI/CD via Bitbucket Pipelines."
     },
     {
       "id": 3,
-      "imageFile": "accenture-logo.png",
-      "company": "Accenture",
-      "role": "Senior Software Engineer",
-      "period": "Jun 2023 – Sep 2024",
-      "description": "Led migration of 4+ monolithic applications to Spring Cloud microservices, improving deployment efficiency by 30%. Streamlined CI/CD pipelines with Jenkins for faster, more reliable releases, and integrated AWS services to improve scalability while reducing infrastructure costs."
-    },
-    {
-      "id": 4,
-      "imageFile": "accenture-logo.png",
-      "company": "Accenture",
-      "role": "Software Engineer",
-      "period": "Aug 2021 – May 2023",
-      "description": "Built OSGi service components for Adobe Experience Manager (AEM) to improve content delivery. Delivered features aligned with coding standards, unit testing, and CI best practices, collaborated closely with product owners in agile sprints, and designed GraphQL endpoints for flexible data retrieval."
-    },
-    {
-      "id": 5,
       "imageFile": "sysco-logo.png",
       "company": "Sysco",
       "role": "Software Engineer",
-      "period": "Nov 2019 – Aug 2021",
-      "description": "Built full-stack web applications and RESTful APIs, and optimized complex SQL queries and stored procedures in Oracle/PostgreSQL to improve reporting performance. Integrated third-party services into client solutions and collaborated with cross-functional teams to deliver within scope and deadlines."
+      "description": "Full-stack web apps and REST APIs; tuned Oracle and PostgreSQL queries and stored procedures to accelerate reporting. Third-party integrations and cross-functional delivery on scope and timeline."
     }
   ]
 }

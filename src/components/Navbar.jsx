@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 import logo from '../images/logos/logo-white.png'
-import resume from '../download/Daniel Torres Calvo - Resume.pdf'
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
@@ -25,9 +24,6 @@ const Navbar = () => {
                 </div>
 
                 <div className="Navbar__right">
-                    <a href={resume} className="Navbar__ghostButton" target="_blank" rel="noreferrer">
-                        Download Resume
-                    </a>
                     <a href="#contact" className="Navbar__ctaButton">Contact Me</a>
                     <a
                         href="https://github.com/torres274"

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import avatar from '../images/undraw_profile.svg'
-import resume from '../download/Daniel Torres Calvo - Resume.pdf'
 
 const ROLES = [
     'Senior Software Engineer',
@@ -46,8 +45,8 @@ const Header = () => {
                 </h1>
 
                 <p className="Header__sub">
-                    7+ years delivering backend and full-stack solutions for global enterprises,
-                    from large-scale microservices to resilient cloud-native platforms.
+                    Seven-plus years building backend and full-stack software for global enterprises,
+                    from distributed services to cloud-native platforms.
                 </p>
                 <img
                     src={avatar}
@@ -58,9 +57,6 @@ const Header = () => {
                 />
                 <div className="Header__actions">
                     <a href="#projects" className="Header__button">View Projects</a>
-                    <a href={resume} className="Header__ghostButton" target="_blank" rel="noreferrer">
-                        Download Resume
-                    </a>
                 </div>
                 <a href="#skills" className="Header__scroll" aria-label="Scroll to skills section">
                     <span className="Header__scroll-chevron" aria-hidden="true" />

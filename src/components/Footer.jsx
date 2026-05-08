@@ -15,7 +15,7 @@ const Footer = () => {
                         <img src={logo} alt="Daniel Torres personal logo" />
                     </Link>
 
-                    <p>Thanks for scrolling — have a nice day!</p>
+                    <p>Thanks for stopping by.</p>
                 </div>
 
                 <div className="Footer__icons">

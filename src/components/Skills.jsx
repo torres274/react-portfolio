@@ -9,7 +9,7 @@ const SKILLS = [
         icon: code,
         iconAlt: 'Backend & Full Stack',
         title: 'Backend & Full Stack',
-        description: 'Design and delivery of scalable backend services and full-stack systems, from API architecture to production operations.',
+        description: 'Scalable backends and full-stack delivery—from API design through production operations.',
         categories: [
             { label: 'Backend',  tags: ['Java', 'Spring Boot', 'Python', 'Flask'] },
             { label: 'Frontend', tags: ['React', 'JavaScript ES6+', 'HTML5', 'CSS3'] },
@@ -19,7 +19,7 @@ const SKILLS = [
         icon: tools,
         iconAlt: 'Cloud & DevOps',
         title: 'Cloud & DevOps',
-        description: 'Reliable cloud delivery with CI/CD automation, infrastructure best practices, and release engineering discipline.',
+        description: 'Cloud delivery with automated CI/CD, solid infrastructure habits, and release engineering discipline.',
         categories: [
             { label: 'Cloud',     tags: ['GCP', 'AWS', 'Azure'] },
             { label: 'CI/CD',     tags: ['Jenkins', 'Bitbucket Pipelines', 'Docker', 'GitHub Actions'] },
@@ -30,7 +30,7 @@ const SKILLS = [
         icon: code,
         iconAlt: 'Databases & Other',
         title: 'Databases & Other',
-        description: 'Strong data and platform foundations across relational and NoSQL databases, enterprise CMS, GraphQL, and security tooling.',
+        description: 'Data and platforms: relational and NoSQL stores, enterprise CMS, GraphQL, and application security tooling.',
         categories: [
             { label: 'Databases', tags: ['Oracle', 'PostgreSQL', 'MySQL', 'DynamoDB'] },
             { label: 'Tools',     tags: ['AEM', 'GraphQL', 'Checkmarx'] },

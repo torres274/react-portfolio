@@ -49,7 +49,9 @@ const ExperienceCards = ({ experience }) => (
                     )}
                     <div className="Experience__meta">
                         <span className="Experience__role">{item.role}</span>
-                        <span className="Experience__period">{item.period}</span>
+                        {item.period ? (
+                            <span className="Experience__period">{item.period}</span>
+                        ) : null}
                     </div>
                     <p>{item.description}</p>
                 </motion.div>
