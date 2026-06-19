@@ -56,22 +56,22 @@
       "id": 1,
       "imageFile": "accenture-logo.png",
       "company": "Accenture",
-      "role": "Software Engineer",
-      "description": "Enterprise search and data: Aspire 5 ingestion, Groovy transformations, Elasticsearch, and Power BI for operational visibility. Monolith-to-microservices work with Spring Cloud, Jenkins CI/CD, and AWS for scale and cost-aware delivery. Adobe Experience Manager (AEM) with OSGi and GraphQL, working closely with product teams under strong testing and CI practices."
+      "role": "Senior Software Engineer",
+      "description": "Enterprise search and analytics: Aspire 5 ingestion pipelines, Groovy transformations, Elasticsearch indexing, and Power BI dashboards for real-time KPI visibility. Led migration of 4+ monolithic applications to Spring Cloud microservices—30% faster deployments through Jenkins CI/CD and AWS. Adobe Experience Manager (AEM) with OSGi components, GraphQL APIs, and agile delivery alongside product teams."
     },
     {
       "id": 2,
       "imageFile": "transunion-logo.png",
       "company": "TransUnion",
       "role": "Senior Software Engineer",
-      "description": "Microservices architecture for high-traffic workloads, improving scalability and resilience. Hardened releases with Checkmarx and a security-first mindset. Python-based GCP Cloud Functions, event-driven patterns with Pub/Sub, and CI/CD via Bitbucket Pipelines."
+      "description": "Microservices architecture for high-traffic applications, improving scalability and reducing downtime. Cut production vulnerabilities by 80% with Checkmarx and a security-first release practice. Python GCP Cloud Functions, Pub/Sub event-driven flows, and CI/CD through Bitbucket Pipelines."
     },
     {
       "id": 3,
       "imageFile": "sysco-logo.png",
       "company": "Sysco",
       "role": "Software Engineer",
-      "description": "Full-stack web apps and REST APIs; tuned Oracle and PostgreSQL queries and stored procedures to accelerate reporting. Third-party integrations and cross-functional delivery on scope and timeline."
+      "description": "Full-stack web applications and REST APIs across reporting and client-facing modules. Optimized Oracle and PostgreSQL queries and stored procedures, improving reporting response times by 25%. Third-party integrations and cross-functional delivery to scope and deadlines."
     }
   ]
 }

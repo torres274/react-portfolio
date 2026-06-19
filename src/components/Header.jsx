@@ -23,11 +23,6 @@ const Header = () => {
     return (
         <header id="about" className="Header">
             <div className="Header__hero">
-                <div className="Header__badge">
-                    <span className="Header__badge-dot" aria-hidden="true" />
-                    Open to opportunities
-                </div>
-
                 {/* aria-live so screen readers announce role changes */}
                 <h1 className="Header__headline" aria-live="polite" aria-atomic="true">
                     <AnimatePresence mode="popLayout">
