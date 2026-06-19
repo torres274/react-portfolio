@@ -1,14 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react'
 
+import { CONTACT_EMAIL } from '../config/contact'
 import projectsData from '../db/data.json'
 
 const Projects = () => {
     const { projects } = projectsData
-    const hiddenProjectIds = useMemo(() => new Set([1]), [])
-    const visibleProjects = useMemo(
-        () => projects.filter((project) => !hiddenProjectIds.has(project.id)),
-        [projects, hiddenProjectIds]
-    )
+    const visibleProjects = projects
 
     const carouselProjects = useMemo(() => {
         if (visibleProjects.length === 0) return []
@@ -49,7 +46,6 @@ const Projects = () => {
 
     useEffect(() => {
         const onVisibilityChange = () => {
-            // Pause autoplay only while tab is hidden
             setIsPaused(document.hidden)
         }
 
@@ -58,7 +54,6 @@ const Projects = () => {
     }, [])
 
     useEffect(() => {
-        // Safety guard in case activeIndex drifts outside expected bounds
         if (visibleProjects.length === 0) return
         if (activeIndex < 0 || activeIndex > visibleProjects.length + 1) {
             setIsTransitionEnabled(false)
@@ -90,12 +85,15 @@ const Projects = () => {
         ? ((activeIndex - 1 + visibleProjects.length) % visibleProjects.length)
         : 0
 
+    const projectMailto = (title) =>
+        `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Question about ${title}`)}`
+
     return (
         <div id="projects" className="Projects__container">
             <h1>My Recent Work</h1>
             <h2>
                 Representative work across product types and stacks.{' '}
-                <a href="mailto:daniel.torres96@hotmail.com">Ask me about other engagements.</a>
+                <a href={`mailto:${CONTACT_EMAIL}`}>Ask me about other engagements.</a>
             </h2>
 
             <div className="Projects__carousel">
@@ -119,6 +117,7 @@ const Projects = () => {
                             const isActive = normalizedIndex === visibleIndex
                             const isClone = index === 0 || index === carouselProjects.length - 1
                             const isAdjacent = Math.abs(index - activeIndex) === 1
+                            const hasExternalLink = project.projectURL && project.projectURL !== '#'
 
                             return (
                                 <article
@@ -144,7 +143,7 @@ const Projects = () => {
                                             </div>
                                         )}
 
-                                        {project.projectURL && project.projectURL !== '#' && (
+                                        {hasExternalLink ? (
                                             <a
                                                 href={project.projectURL}
                                                 className="ProjectsCard__cta"
@@ -153,6 +152,15 @@ const Projects = () => {
                                                 aria-label={`View ${project.title} project`}
                                             >
                                                 View Project
+                                                <span className="ProjectsCard__cta-arrow" aria-hidden="true">→</span>
+                                            </a>
+                                        ) : (
+                                            <a
+                                                href={projectMailto(project.title)}
+                                                className="ProjectsCard__cta"
+                                                aria-label={`Ask about ${project.title}`}
+                                            >
+                                                Ask about this project
                                                 <span className="ProjectsCard__cta-arrow" aria-hidden="true">→</span>
                                             </a>
                                         )}
@@ -173,6 +181,21 @@ const Projects = () => {
                 </button>
             </div>
 
+            {visibleProjects.length > 1 && (
+                <div className="Projects__dots" role="tablist" aria-label="Project slides">
+                    {visibleProjects.map((project, index) => (
+                        <button
+                            key={project.id}
+                            type="button"
+                            role="tab"
+                            aria-selected={index === visibleIndex}
+                            aria-label={`Go to ${project.title}`}
+                            className={`Projects__dot${index === visibleIndex ? ' is-active' : ''}`}
+                            onClick={() => goTo(index)}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     )
 }

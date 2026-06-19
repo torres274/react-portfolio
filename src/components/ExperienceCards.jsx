@@ -11,7 +11,6 @@ const experienceLogos = {
     'sysco-logo.png': syscoLogo,
 }
 
-// Parent: triggers whileInView and passes stagger down to children
 const gridVariants = {
     hidden: {},
     visible: {
@@ -19,7 +18,6 @@ const gridVariants = {
     }
 }
 
-// Each card fades up individually
 const cardVariants = {
     hidden:  { opacity: 0, y: 28 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
@@ -35,6 +33,8 @@ const ExperienceCards = ({ experience }) => (
     >
         {experience.map((item) => {
             const imgSrc = item.imageFile ? experienceLogos[item.imageFile] : null
+            const highlights = item.highlights ?? (item.description ? [item.description] : [])
+
             return (
                 <motion.div
                     key={item.id}
@@ -44,16 +44,21 @@ const ExperienceCards = ({ experience }) => (
                 >
                     {imgSrc && (
                         <div className="Experience__image">
-                            <img src={imgSrc} alt={item.company} width="180" loading="lazy" />
+                            <img src={imgSrc} alt="" width="180" loading="lazy" />
                         </div>
                     )}
                     <div className="Experience__meta">
+                        <span className="Experience__company">{item.company}</span>
                         <span className="Experience__role">{item.role}</span>
                         {item.period ? (
                             <span className="Experience__period">{item.period}</span>
                         ) : null}
                     </div>
-                    <p>{item.description}</p>
+                    <ul className="Experience__highlights">
+                        {highlights.map((point) => (
+                            <li key={point}>{point}</li>
+                        ))}
+                    </ul>
                 </motion.div>
             )
         })}

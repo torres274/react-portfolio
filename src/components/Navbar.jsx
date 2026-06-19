@@ -5,6 +5,14 @@ import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 import logo from '../images/logos/logo-white.png'
 
+const NAV_LINKS = [
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#contact', label: 'Contact' },
+]
+
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
 
@@ -21,6 +29,14 @@ const Navbar = () => {
                     <Link to="/">
                         <img src={logo} alt="Daniel Torres | Software Engineer" />
                     </Link>
+                </div>
+
+                <div className="Navbar__links" aria-label="Primary navigation">
+                    {NAV_LINKS.map((link) => (
+                        <a key={link.href} href={link.href} className="Navbar__link">
+                            {link.label}
+                        </a>
+                    ))}
                 </div>
 
                 <div className="Navbar__right">

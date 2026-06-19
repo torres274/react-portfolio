@@ -23,6 +23,25 @@
   }
 }
 
+.Experience__highlights {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  list-style: disc;
+  text-align: left;
+
+  li {
+    color: $text-on-light-muted;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 0.55rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .Experience__image {
   display: flex;
   height: 100px;
@@ -50,6 +69,13 @@
   margin-bottom: 0.75rem;
 }
 
+.Experience__company {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $text-on-light;
+  letter-spacing: -0.01em;
+}
+
 .Experience__role {
   font-size: 0.85rem;
   font-weight: 600;
@@ -69,7 +95,8 @@
     min-width: 0;
   }
 
-  .Experience__column p {
+  .Experience__column p,
+  .Experience__highlights li {
     font-size: 0.9rem;
   }
 
@@ -89,7 +116,8 @@
     margin: 0.4rem;
   }
 
-  .Experience__column p {
+  .Experience__column p,
+  .Experience__highlights li {
     font-size: 0.85rem;
   }
 

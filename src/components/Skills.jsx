@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 import code from '../images/dev.svg'
 import tools from '../images/tools.svg'
+import database from '../images/database.svg'
 
 const SKILLS = [
     {
@@ -27,7 +28,7 @@ const SKILLS = [
         ],
     },
     {
-        icon: code,
+        icon: database,
         iconAlt: 'Databases & Other',
         title: 'Databases & Other',
         description: 'Data and platforms: relational and NoSQL stores, enterprise CMS, GraphQL, and application security tooling.',
@@ -38,20 +39,18 @@ const SKILLS = [
     },
 ]
 
-// Stagger parent: orchestrates children entrance sequence
 const gridVariants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.14, delayChildren: 0.05 } },
 }
 
-// Each column fades up individually
 const columnVariants = {
     hidden:  { opacity: 0, y: 28 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.52, ease: 'easeOut' } },
 }
 
 const Skills = () => (
-    <div className="Skills__container">
+    <div id="skills" className="Skills__container">
         <motion.div
             className="Skills__box"
             variants={gridVariants}

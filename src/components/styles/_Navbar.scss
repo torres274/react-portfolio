@@ -33,12 +33,34 @@
 .Navbar__logo {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 
   img {
     height: 36px;
     max-width: 140px;
     width: auto;
     object-fit: contain;
+  }
+}
+
+.Navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.Navbar__link {
+  color: $text-on-dark-muted;
+  font-size: 0.88rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.15s ease-out;
+
+  &:hover,
+  &:focus-visible {
+    color: $white;
   }
 }
 
@@ -100,6 +122,12 @@
   &:focus {
     border-color: $blue;
     color: $blue;
+  }
+}
+
+@media (max-width: 960px) {
+  .Navbar__links {
+    display: none;
   }
 }
 

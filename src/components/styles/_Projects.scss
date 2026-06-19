@@ -89,6 +89,36 @@
   right: 0.6rem;
 }
 
+.Projects__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.1rem;
+}
+
+.Projects__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background: rgba(148, 163, 184, 0.45);
+  cursor: pointer;
+  transition: transform 0.15s ease-out, background 0.15s ease-out;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(96, 165, 250, 0.75);
+    transform: scale(1.15);
+  }
+
+  &.is-active {
+    background: $blue;
+    transform: scale(1.2);
+  }
+}
+
 .ProjectsCards__container {
   position: relative;
   overflow: hidden;
