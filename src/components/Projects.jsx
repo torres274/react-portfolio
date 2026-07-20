@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
 
-import { CONTACT_EMAIL } from '../config/contact'
 import projectsData from '../db/data.json'
 
 const Projects = () => {
@@ -85,16 +84,10 @@ const Projects = () => {
         ? ((activeIndex - 1 + visibleProjects.length) % visibleProjects.length)
         : 0
 
-    const projectMailto = (title) =>
-        `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Question about ${title}`)}`
-
     return (
         <div id="projects" className="Projects__container">
             <h1>My Recent Work</h1>
-            <h2>
-                Representative work across product types and stacks.{' '}
-                <a href={`mailto:${CONTACT_EMAIL}`}>Ask me about other engagements.</a>
-            </h2>
+            <h2>Representative work across product types and stacks.</h2>
 
             <div className="Projects__carousel">
                 <button
@@ -106,7 +99,11 @@ const Projects = () => {
                     ‹
                 </button>
 
-                <div className="Projects__viewport">
+                <div
+                    className="Projects__viewport"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
                     <div
                         className={`Projects__track${isTransitionEnabled ? '' : ' Projects__track--noTransition'}`}
                         style={{ transform: `translateX(calc(50% - ${activeIndex} * (var(--projects-slide-width) + var(--projects-slide-gap)) - (var(--projects-slide-width) / 2)))` }}
@@ -143,24 +140,15 @@ const Projects = () => {
                                             </div>
                                         )}
 
-                                        {hasExternalLink ? (
+                                        {hasExternalLink && (
                                             <a
                                                 href={project.projectURL}
                                                 className="ProjectsCard__cta"
                                                 target="_blank"
                                                 rel="noreferrer noopener"
-                                                aria-label={`View ${project.title} project`}
+                                                aria-label={`${project.ctaLabel || 'View Project'}: ${project.title}`}
                                             >
-                                                View Project
-                                                <span className="ProjectsCard__cta-arrow" aria-hidden="true">→</span>
-                                            </a>
-                                        ) : (
-                                            <a
-                                                href={projectMailto(project.title)}
-                                                className="ProjectsCard__cta"
-                                                aria-label={`Ask about ${project.title}`}
-                                            >
-                                                Ask about this project
+                                                {project.ctaLabel || 'View Project'}
                                                 <span className="ProjectsCard__cta-arrow" aria-hidden="true">→</span>
                                             </a>
                                         )}

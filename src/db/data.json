@@ -28,7 +28,8 @@
       "description": "Reporting and BI dashboard with KPI tracking, historical trends, and operational views tailored for business stakeholders.",
       "tags": ["C#", ".NET", "SQL Server", "Power BI", "REST API"],
       "imageFile": "/images/companies/mag.jpg",
-      "projectURL": "#"
+      "projectURL": "https://mag.go.cr",
+      "ctaLabel": "Visit Company"
     },
     {
       "id": 4,
@@ -38,7 +39,7 @@
       "description": "Marketing site and reservation experience for a spa: service catalog, scheduling, and content-led pages aimed at bookings and conversions.",
       "tags": ["React", "TypeScript", "Vercel", "Cal.com", "Sanity", "Node.js"],
       "imageFile": "/images/companies/blue-royale-spa.png",
-      "projectURL": "#"
+      "projectURL": "https://www.blueroyalespa.com"
     },
     {
       "id": 5,
@@ -48,7 +49,18 @@
       "description": "E-commerce for electronics: catalog, cart and checkout, inventory, and order handling for day-to-day retail operations.",
       "tags": ["PHP", "Laravel", "MySQL", "HTML5", "CSS3", "JavaScript"],
       "imageFile": "/images/companies/mouse.png",
-      "projectURL": "#"
+      "projectURL": "https://www.mouselamp.com/contactenos.html",
+      "ctaLabel": "Visit Company"
+    },
+    {
+      "id": 6,
+      "title": "Wheele Landing",
+      "subtitle": "Marketing Website for P2P Car Rental Platform",
+      "role": "Full Stack Engineer",
+      "description": "Public-facing landing page for Wheele: product overview, value proposition, and lead capture designed to drive sign-ups for the car rental platform.",
+      "tags": ["React", "Vercel"],
+      "imageFile": "/images/companies/wheele-landing.png",
+      "projectURL": "https://wheele-landing.vercel.app"
     }
   ],
   "experience": [
